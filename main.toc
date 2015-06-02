@@ -130,118 +130,118 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.9}The Jaundiced Patient}{36}{section.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.9.1}Impact of jaundice on cardiovascular physiology}{36}{subsection.78}
+\contentsline {subsection}{\numberline {1.9.1}Impact of jaundice on cardiovascular physiology}{37}{subsection.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.9.2}Impact of jaundice on renal physiology}{36}{subsection.79}
+\contentsline {subsection}{\numberline {1.9.2}Impact of jaundice on renal physiology}{37}{subsection.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.9.3}Impact of jaundice on the immune system}{36}{subsection.80}
+\contentsline {subsection}{\numberline {1.9.3}Impact of jaundice on the immune system}{37}{subsection.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.9.4}Jaundice and postoperative outcomes}{36}{subsection.81}
+\contentsline {subsection}{\numberline {1.9.4}Jaundice and postoperative outcomes}{37}{subsection.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.9.5}Role of preoperative biliary drainage}{36}{subsection.82}
+\contentsline {subsection}{\numberline {1.9.5}Role of preoperative biliary drainage}{37}{subsection.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}An investigation into the role of preoperative cardiopulmonary exercise testing in predicting adverse postoperative events after major pancreatic surgery.}{37}{chapter.83}
+\contentsline {chapter}{\numberline {2}An investigation into the role of preoperative cardiopulmonary exercise testing in predicting adverse postoperative events after major pancreatic surgery.}{38}{chapter.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Introduction}{38}{section.84}
+\contentsline {section}{\numberline {2.1}Introduction}{39}{section.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Methods}{40}{section.85}
+\contentsline {section}{\numberline {2.2}Methods}{41}{section.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Statistics}{42}{subsection.86}
+\contentsline {subsection}{\numberline {2.2.1}Statistics}{43}{subsection.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Results}{44}{section.87}
+\contentsline {section}{\numberline {2.3}Results}{45}{section.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Discussion}{53}{section.94}
+\contentsline {section}{\numberline {2.4}Discussion}{54}{section.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}An investigation into the relationship between obstructive jaundice and preoperative pathophysiology in patients undergoing major pancreatic surgery.}{58}{chapter.95}
+\contentsline {chapter}{\numberline {3}An investigation into the relationship between obstructive jaundice and preoperative pathophysiology in patients undergoing major pancreatic surgery.}{59}{chapter.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Introduction}{59}{section.96}
+\contentsline {section}{\numberline {3.1}Introduction}{60}{section.96}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Patients and Methods}{62}{section.97}
+\contentsline {section}{\numberline {3.2}Patients and Methods}{63}{section.97}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Preoperative Data}{62}{subsection.98}
+\contentsline {subsection}{\numberline {3.2.1}Preoperative Data}{63}{subsection.98}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Obstructive Jaundice}{63}{subsection.99}
+\contentsline {subsection}{\numberline {3.2.2}Obstructive Jaundice}{64}{subsection.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Cardiopulmonary Exercise Test}{63}{subsection.100}
+\contentsline {subsection}{\numberline {3.2.3}Cardiopulmonary Exercise Test}{64}{subsection.100}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.4}Statistics}{64}{subsection.101}
+\contentsline {subsection}{\numberline {3.2.4}Statistics}{65}{subsection.101}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Results}{65}{section.102}
+\contentsline {section}{\numberline {3.3}Results}{66}{section.102}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.0.1}Univariate analysis of obstructive jaundice versus CPET}{66}{subsubsection.106}
+\contentsline {subsubsection}{\numberline {3.3.0.1}Univariate analysis of obstructive jaundice versus CPET}{67}{subsubsection.106}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.0.2}Association between preoperative clinico-pathological factors and VO$_2$AT}{69}{subsubsection.108}
+\contentsline {subsubsection}{\numberline {3.3.0.2}Association between preoperative clinico-pathological factors and VO$_2$AT}{70}{subsubsection.108}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.0.3}Scatter-plot analysis}{69}{subsubsection.110}
+\contentsline {subsubsection}{\numberline {3.3.0.3}Scatter-plot analysis}{70}{subsubsection.110}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Discussion}{72}{section.111}
+\contentsline {section}{\numberline {3.4}Discussion}{73}{section.111}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Conclusions}{76}{section.112}
+\contentsline {section}{\numberline {3.5}Conclusions}{77}{section.112}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}An investigation into the relationship between cardiopulmonary exercise testing and body composition in patients undergoing major pancreatic surgery.}{77}{chapter.113}
+\contentsline {chapter}{\numberline {4}An investigation into the relationship between cardiopulmonary exercise testing and body composition in patients undergoing major pancreatic surgery.}{78}{chapter.113}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Introduction}{78}{section.114}
+\contentsline {section}{\numberline {4.1}Introduction}{79}{section.114}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Role of preoperative CPET}{78}{subsection.115}
+\contentsline {subsection}{\numberline {4.1.1}Role of preoperative CPET}{79}{subsection.115}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}The pathophysiological basis of CPET}{79}{subsection.116}
+\contentsline {subsection}{\numberline {4.1.2}The pathophysiological basis of CPET}{80}{subsection.116}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Factors influencing aerobic fitness}{80}{subsection.117}
+\contentsline {subsection}{\numberline {4.1.3}Factors influencing aerobic fitness}{81}{subsection.117}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Aims}{81}{subsection.118}
+\contentsline {subsection}{\numberline {4.1.4}Aims}{82}{subsection.118}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Methods}{82}{section.119}
+\contentsline {section}{\numberline {4.2}Methods}{83}{section.119}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Patients}{82}{subsection.120}
+\contentsline {subsection}{\numberline {4.2.1}Patients}{83}{subsection.120}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Body composition calculation}{82}{subsection.121}
+\contentsline {subsection}{\numberline {4.2.2}Body composition calculation}{83}{subsection.121}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Cardiopulmonary exercise testing}{85}{subsection.123}
+\contentsline {subsection}{\numberline {4.2.3}Cardiopulmonary exercise testing}{86}{subsection.123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}Statistics}{85}{subsection.124}
+\contentsline {subsection}{\numberline {4.2.4}Statistics}{86}{subsection.124}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Results}{87}{section.125}
+\contentsline {section}{\numberline {4.3}Results}{88}{section.125}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Body composition and Clinico-pathological characteristics}{87}{subsection.126}
+\contentsline {subsection}{\numberline {4.3.1}Body composition and Clinico-pathological characteristics}{88}{subsection.126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Body Composition in Normal BMI vs Overweight/Obese Patients}{87}{subsection.128}
+\contentsline {subsection}{\numberline {4.3.2}Body Composition in Normal BMI vs Overweight/Obese Patients}{88}{subsection.128}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Correlation with Pulmonary Function Tests}{90}{subsection.130}
+\contentsline {subsection}{\numberline {4.3.3}Correlation with Pulmonary Function Tests}{91}{subsection.130}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Correlation with Exercise Load}{90}{subsection.131}
+\contentsline {subsection}{\numberline {4.3.4}Correlation with Exercise Load}{91}{subsection.131}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}Correlation with Oxygen consumption}{92}{subsection.134}
+\contentsline {subsection}{\numberline {4.3.5}Correlation with Oxygen consumption}{93}{subsection.134}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Discussion}{95}{section.136}
+\contentsline {section}{\numberline {4.4}Discussion}{96}{section.136}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Oxygen consumption and body composition}{95}{subsection.137}
+\contentsline {subsection}{\numberline {4.4.1}Oxygen consumption and body composition}{96}{subsection.137}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Comparison with previous studies}{96}{subsection.138}
+\contentsline {subsection}{\numberline {4.4.2}Comparison with previous studies}{97}{subsection.138}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.3}Clinical implications of spurious correlation}{99}{subsection.139}
+\contentsline {subsection}{\numberline {4.4.3}Clinical implications of spurious correlation}{100}{subsection.139}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.4}Measuring impact of Prehabilitation}{101}{subsection.140}
+\contentsline {subsection}{\numberline {4.4.4}Measuring impact of Prehabilitation}{102}{subsection.140}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}An investigation into the relationship between cardiopulmonary exercise testing, comorbidity, systemic inflammation and survival after pancreaticoduodenectomy for cancer.}{102}{chapter.141}
+\contentsline {chapter}{\numberline {5}An investigation into the relationship between cardiopulmonary exercise testing, comorbidity, systemic inflammation and survival after pancreaticoduodenectomy for cancer.}{103}{chapter.141}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Introduction}{103}{section.142}
+\contentsline {section}{\numberline {5.1}Introduction}{104}{section.142}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Aim}{104}{section.143}
+\contentsline {section}{\numberline {5.2}Aim}{105}{section.143}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Patients and Methods}{104}{section.144}
+\contentsline {section}{\numberline {5.3}Patients and Methods}{105}{section.144}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Statistics}{105}{subsection.145}
+\contentsline {subsection}{\numberline {5.3.1}Statistics}{106}{subsection.145}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Results}{106}{section.146}
+\contentsline {section}{\numberline {5.4}Results}{107}{section.146}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Discussion}{106}{section.147}
+\contentsline {section}{\numberline {5.5}Discussion}{107}{section.147}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{107}{chapter.148}
-\defcounter {refsection}{0}\relax 
-\@LN@changevadjust \vspace {2em}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Breath-by-breath CPET sample data}{109}{appendix.149}
+\contentsline {chapter}{\numberline {6}Conclusion}{108}{chapter.148}
 \defcounter {refsection}{0}\relax 
 \@LN@changevadjust \vspace {2em}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{112}{dummy.152}
+\contentsline {chapter}{\numberline {A}Breath-by-breath CPET sample data}{110}{appendix.149}
+\defcounter {refsection}{0}\relax 
+\@LN@changevadjust \vspace {2em}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{113}{dummy.152}
