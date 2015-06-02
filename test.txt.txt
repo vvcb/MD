@@ -1,3 +1,0 @@
-This is a test.
-What happens if I add a second line in between.
-I this line not to be committed. Instead it should disappear.
