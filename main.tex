@@ -31,10 +31,16 @@
 %--------------------PACKAGES------------------------------------------------------------
 
 \usepackage[backend=biber,
-			style=authoryear,
+			citestyle=authoryear,
+			bibstyle=authoryear,
+			uniquelist=false,
+			uniquename=false,
+			maxcitenames=1,
+			mincitenames=1,
 			url=false]{biblatex}
 %For Square Brackets around citations
 %http://tex.stackexchange.com/questions/16765/biblatex-author-year-square-brackets
+%http://ctan.mirrorcatalogs.com/macros/latex/contrib/biblatex/doc/biblatex.pdf - for info on all the above options. File is also stored in the Glasgow Research folder
 \makeatletter
 
 \newrobustcmd*{\parentexttrack}[1]{%
