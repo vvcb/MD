@@ -118,6 +118,7 @@ sympy-plots-for-*.tex/
 
 # todonotes
 *.tdo
+*.lod
 
 # xindy
 *.xdy
