@@ -17,7 +17,8 @@ The aim of this study was to investigate the association between postoperative s
  
 \clearpage
 \section{Methods}
-Patients who underwent pancreaticoduodenectomy between August 2008 and July 2012 were included in the study. Data were collected from a prospectively maintained database. All complications were discussed at a weekly meeting and prospectively recorded. Postoperative pancreatic fistula and post-pancreatectomy haemorrhage were graded according to the International Study Group classifications. All other complications were graded using the Clavien-Dindo system. Postoperative mortality was defined as death within 30-days of the operation or while still in hospital after the operation. Re-intervention in the form of radiological, endoscopic or surgical procedures was recorded prospectively. Preoperative blood results as well as postoperative blood results for the first 7 days after surgery were collected from the hospital laboratory databases. 
+\todo{Check dates for this study}
+Patients who underwent pancreaticoduodenectomy between January 2008 and July 2012 were included in the study. Data were collected from a prospectively maintained database. All complications were discussed at a weekly meeting and prospectively recorded. Postoperative pancreatic fistula and post-pancreatectomy haemorrhage were graded according to the International Study Group classifications. All other complications were graded using the Clavien-Dindo system. Postoperative mortality was defined as death within 30-days of the operation or while still in hospital after the operation. Re-intervention in the form of radiological, endoscopic or surgical procedures was recorded prospectively. Preoperative blood results as well as postoperative blood results for the first 7 days after surgery were collected from the hospital laboratory databases. 
 
 \subsection{Statistics}
 SPSS version 22 was used for all analysis. ROC analysis was used to identify the optimum thresholds of CRP for predicting complications.
@@ -27,6 +28,68 @@ SPSS version 22 was used for all analysis. ROC analysis was used to identify the
 
 \clearpage
 \section{Results}
+One hundred and eighty patient (131 male) underwent pancreaticoduodenectomy during the study period. 
+
+%CRP trends and pancreatic fistula
+Postoperative CRP levels on days 2 through 7 were significantly higher in patients who developed a postoperative pancreatic fistula. However, CRP levels in the first postoperative week were not associated with the clinical severity of the pancreatic fistula. These results are presented in Table \ref{table:crp_comp_vs_POPF_ISGPS_p_values_only} and Fig. \ref{fig:crp_comp_crp_popf}. Fig. \ref{fig:crp_comp_crp_popf_isgps} shows that CRP levels were not significantly different between the different grades of pancreatic fistula while CRP levels in patients who did not develop a pancreatic fistula had significantly lower CRP levels.
+
+%SPSS results and graphs are stored in crp_complications_graphs_etc.spv file
+
+%==============================================================================
+%CRP trends in a 2-panel figure and table showing p-values below it
+\clearpage
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_crp_popf_yes_no}
+		\caption{POPF Absent vs. Any Grade}
+		\label{fig:crp_comp_crp_popf_yes_no}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_crp_popf_isgps}
+		\caption{POPF ISGPS Grades}
+		\label{fig:crp_comp_crp_popf_isgps}
+	\end{subfigure}
+	
+	\caption{Serum CRP levels in the first week after pancreaticoduodenectomy in patients with postoperative pancreatic fistula (POPF).}
+	\label{fig:crp_comp_crp_popf}
+	
+\end{figure}
+\input{Tables/crp_comp_vs_POPF_ISGPS_p_values_only}
+%==============================================================================
+
+%Ability of CRP to predict infectious complications in leak vs. no leak complications
+%Rationale - POPF is diagnosed with a separate definition - ISGPS on Day 3. Therefore, there is no role for CRP in diagnosing POPF. Above results show that it does not discriminate between the grades either. Therefore, the following analysis is to find out if the first week CRP has any role in predicting other outcome measures.
+
+
+
+
+%==============================================================================
+%CRP trends in a 2-panel figure and table showing p-values below it
+\clearpage
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_infectious_leak0}
+		\caption{Patients with \textbf{\underline{no}} POPF}
+		\label{fig:crp_comp_infectious_leak0}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_infectious_leak1}
+		\caption{Patients with POPF}
+		\label{fig:crp_comp_infectious_leak1}
+	\end{subfigure}
+	
+	\caption{Relationship between postoperative CRP and clinically significant infectious complications in patients without (A) and with (B) POPF.}
+	\label{fig:crp_comp_infectious_leak}
+	
+\end{figure}
+\input{Tables/crp_comp_vs_infections_popf_y1n0}
+%==============================================================================
 
 
 
