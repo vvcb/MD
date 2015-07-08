@@ -35,7 +35,7 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 
 %SPSS results and graphs are stored in crp_complications_graphs_etc.spv file
 
-%==============================================================================
+%========================CRP vs POPF============================================
 %CRP trends in a 2-panel figure and table showing p-values below it
 \clearpage
 \begin{figure}[htbp]
@@ -66,10 +66,10 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 
 
 
-%==============================================================================
-%CRP trends in a 2-panel figure and table showing p-values below it
+%========================CRP vs Infections====================================
+%CRP trends vs infections in patients with or without popf in a 2-panel figure and table showing median, iqr and p-values below it
 \clearpage
-\begin{figure}[htbp]
+\begin{figure}[t]
 	\centering
 	\begin{subfigure}{0.45\textwidth}
 		\centering
@@ -90,6 +90,47 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 \end{figure}
 \input{Tables/crp_comp_vs_infections_popf_y1n0}
 %==============================================================================
+
+%========================ROC Curves==========================================
+\clearpage
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_ROC_infection_D3}
+		\caption{Day 3}
+		\label{fig:crp_comp_ROC_infection_D3}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_ROC_infection_D4}
+		\caption{Day 4}
+		\label{fig:crp_comp_ROC_infection_D4}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_ROC_infection_D5}
+		\caption{Day 5}
+		\label{fig:crp_comp_ROC_infection_D5}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_ROC_infection_D6}
+		\caption{Day 6}		
+		\label{fig:crp_comp_ROC_infection_D6}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{Figures/crp_comp_ROC_infection_D7}
+		\caption{Day 7}
+		\label{fig:crp_comp_ROC_infection_D7}
+	\end{subfigure}
+	
+	\caption{Receiver operating characteristics curve analysis of C-reactive protein as a marker of postoperative infective complications.}
+	\label{fig:crp_comp_ROC_infection}
+	
+\end{figure}
+\input{Tables/crp_comp_ROC_infections_noPOPF}
 
 
 
