@@ -38,25 +38,25 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 %========================CRP vs POPF============================================
 %CRP trends in a 2-panel figure and table showing p-values below it
 \clearpage
-\begin{figure}[htbp]
+\begin{figure}[t]
+	\caption{Serum CRP levels in the first week after pancreaticoduodenectomy in patients with postoperative pancreatic fistula (POPF).}
+	\label{fig:crp_comp_crp_popf}
 	\centering
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/crp_comp_crp_popf_yes_no}
 		\caption{POPF Absent vs. Any Grade}
 		\label{fig:crp_comp_crp_popf_yes_no}
 	\end{subfigure}
-	\begin{subfigure}{0.45\textwidth}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/crp_comp_crp_popf_isgps}
 		\caption{POPF ISGPS Grades}
 		\label{fig:crp_comp_crp_popf_isgps}
 	\end{subfigure}
-	
-	\caption{Serum CRP levels in the first week after pancreaticoduodenectomy in patients with postoperative pancreatic fistula (POPF).}
-	\label{fig:crp_comp_crp_popf}
-	
 \end{figure}
+\hfill
 \input{Tables/crp_comp_vs_POPF_ISGPS_p_values_only}
 %==============================================================================
 
@@ -70,30 +70,33 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 %CRP trends vs infections in patients with or without popf in a 2-panel figure and table showing median, iqr and p-values below it
 \clearpage
 \begin{figure}[t]
+	\caption{Relationship between postoperative CRP and clinically significant infectious complications in patients without (A) and with (B) POPF.}
+	\label{fig:crp_comp_infectious_leak}
 	\centering
-	\begin{subfigure}{0.45\textwidth}
+	\begin{subfigure}{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/crp_comp_infectious_leak0}
 		\caption{Patients with \textbf{\underline{no}} POPF}
 		\label{fig:crp_comp_infectious_leak0}
 	\end{subfigure}
-	\begin{subfigure}{0.45\textwidth}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/crp_comp_infectious_leak1}
 		\caption{Patients with POPF}
 		\label{fig:crp_comp_infectious_leak1}
 	\end{subfigure}
-	
-	\caption{Relationship between postoperative CRP and clinically significant infectious complications in patients without (A) and with (B) POPF.}
-	\label{fig:crp_comp_infectious_leak}
-	
 \end{figure}
+\vfill
 \input{Tables/crp_comp_vs_infections_popf_y1n0}
 %==============================================================================
 
 %========================ROC Curves==========================================
 \clearpage
 \begin{figure}[t]
+	\caption{Receiver operating characteristics curve analysis of C-reactive protein as a marker of postoperative infective complications.}
+	\label{fig:crp_comp_ROC_infection}
+
 	\centering
 	\begin{subfigure}{0.3\textwidth}
 		\centering
@@ -101,12 +104,14 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 		\caption{Day 3}
 		\label{fig:crp_comp_ROC_infection_D3}
 	\end{subfigure}
+	\hfill
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/crp_comp_ROC_infection_D4}
 		\caption{Day 4}
 		\label{fig:crp_comp_ROC_infection_D4}
 	\end{subfigure}
+	\hfill
 	\begin{subfigure}{0.3\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/crp_comp_ROC_infection_D5}
@@ -125,14 +130,14 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 		\caption{Day 7}
 		\label{fig:crp_comp_ROC_infection_D7}
 	\end{subfigure}
-	
-	\caption{Receiver operating characteristics curve analysis of C-reactive protein as a marker of postoperative infective complications.}
-	\label{fig:crp_comp_ROC_infection}
-	
 \end{figure}
+\vfill
 \input{Tables/crp_comp_ROC_infections_noPOPF}
 
-
+%=============================================================================
+%Quick analysis of CPET vs postop CRP - maybe one table
+%ROC analysis of CRP vs LOS
+%Multivariate analysis of CRP as continuous or categorical vs complications, 
 
 \clearpage
 \section{Discussion}
