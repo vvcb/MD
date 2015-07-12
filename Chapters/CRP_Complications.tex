@@ -13,28 +13,54 @@ Pancreaticoduodenectomy is associated with significant morbidity in spite of adv
 Postoperative CRP levels have been shown to predict infectious complications after colorectal surgery as well as oesophago-gastric surgery. It has been postulated that an unmitigated and exaggerated systemic inflammatory response in the early postoperative period is followed by a compensatory anti-inflammatory response that predisposes the patient to sepsis and impaired healing. The role of postoperative CRP in predicting the severity of complications after major pancreatic surgery has not been reported before. Stratifying patients based on the predicted severity of complications will allow identifying low risk patients who will be suitable to continue on enhanced recovery pathways and high risk patients who may require prolonged critical care, prolonged hospitalisation or further interventions.
 
 The aim of this study was to investigate the association between postoperative systemic inflammation and severity of complications after pancreaticoduodenectomy.
- 
- 
-\clearpage
+
 \section{Methods}
 \todo{Check dates for this study}
-Patients who underwent pancreaticoduodenectomy between January 2008 and July 2012 were included in the study. Data were collected from a prospectively maintained database. All complications were discussed at a weekly meeting and prospectively recorded. Postoperative pancreatic fistula and post-pancreatectomy haemorrhage were graded according to the International Study Group classifications. All other complications were graded using the Clavien-Dindo system. Postoperative mortality was defined as death within 30-days of the operation or while still in hospital after the operation. Re-intervention in the form of radiological, endoscopic or surgical procedures was recorded prospectively. Preoperative blood results as well as postoperative blood results for the first 7 days after surgery were collected from the hospital laboratory databases. 
+Patients who underwent elective pancreaticoduodenectomy between January 2008 and July 2012 were included in the study. Patients who underwent only a trial dissection or trial dissection and surgical bypass during this period were excluded. All patients were given antibiotic prophylaxis at induction and this was continued for 24 hours after surgery. All patients had general anaesthesia supplemented either with patient-controlled epidural analgesia or spinal diamorphine and patient-controlled opiate analgesia for postoperative pain relief. Patients were routinely admitted to the surgical high dependency unit where a standardised regimen was followed for early mobilisation, chest physiotherapy and early enteral nutrition. All patients had one or two surgical drain(s) placed at the time of surgery which were removed at the clinician's discretion during the postoperative period based on the presence or absence of postoperative pancreatic fistula or other intra-abdominal collections. 
+
+Patients had routine measurements of inflammatory markers including C-reactive protein (CRP) and differential white cell counts from the day before surgery and every day for at least a week after surgery. These results including the preoperative blood tests and the postoperative blood tests for the first 7 days after surgery were collected from the hospital laboratory databases.
+
+All complications were discussed at a weekly morbidity meeting and prospectively recorded in an electronic database.  The diagnosis and grading of pancreas-specific complications including postoperative pancreatic fistula (POPF, Section \ref{sec:ch_intro_POPF}) and post-pancreatectomy haemorrhage (PPH, Section \ref{sec:ch_intro_PPH}) were made according to the International Study Group classifications as shown in Table \ref{table:isgps_popf} and Table \ref{table:isgps_pph} on p\pageref{table:isgps_popf} respectively.
+
+All other complications were graded using the Clavien-Dindo system as shown in Table \ref{table:clavien-dindo}. This allows the grading of the severity of the complications based on the magnitude of the intervention(s) required to treat them. Postoperative mortality was defined as death within 30-days of the operation or while still in hospital after the operation. Re-intervention in the form of radiological, endoscopic or surgical procedures was recorded prospectively.
 
 \subsection{Statistics}
-SPSS version 22 was used for all analysis. ROC analysis was used to identify the optimum thresholds of CRP for predicting complications.
+Mann-Whitney U test was used to compare the distribution of postoperative CRP (as a continuous variable) in patients who had a complication and those who did not. Data are presented as median (inter-quartile range, IQR) unless otherwise specified. Line plots with error bars depicting 95\% confidence intervals are used to depict the trends in CRP over time across different patient groups. 
+
+Receiver operating characteristic (ROC) analysis was used to identify the optimum thresholds for postoperative CRP for predicting infectious complications with a preference for thresholds that had a greater negative predictive value. Patients were categorised using these thresholds to analyse the relationship between CRP (as a categorical variable) and re-operation, hospital stay, critical care stay, number of critical care admissions as well as postoperative mortality using the Chi-square test of proportions. 
+
+SPSS software (Version 22.0; IBM, USA) was used to perform statistical analysis.
+Effects were considered significant at $\alpha \leq0.05$. 
+
 \todo{Complete this section - most of this can be modified from the stats sections in other chapters}
 
 
-
-\clearpage
 \section{Results}
-One hundred and eighty patient (131 male) underwent pancreaticoduodenectomy during the study period. 
+Pancreaticoduodenectomy was performed in 188 patients (126 male, 67\%) during the study period. The median age was 63.5 years (IQR 54 - 70 years). 79 (42\%) patients were over the age of 65 years. 
+
+Post-operative pancreatic fistula (POPF) as defined by the International Study Group for Pancreatic Fistula (ISGPF) occurred in 61 (33\%) patients. Of these patients, 18 (10.1\%) had a Grade A POPF, 25 (13.3\%) had a Grade B POPF and 18 (9.6\%) had a Grade C POPF. Significant infectious complications of Clavien-Dindo grade 3 or higher occurred in 84 patients. Infectious complications were more common in patients with age $>$65 years (35.6\% vs 50.0\%, p=0.046) and $\dot{V}_{O_2}$AT$<$10 mls/kg/min (28.8\% vs. 52.4\%, p=0.006) were significantly associated with infectious complications. Gender, body mass index, smoking status, modified Glasgow Prognostic Score, preoperative serum bilirubin and POSSUM physiology score were not associated with infectious complications.
+
+Infectious complications were also significantly associated with other complications including post-operative pancreatic fistula, post-pancreatectomy haemorrhage, length of stay in hospital, critical care stay, number of critical care admissions, reoperation rates and in-hospital mortality. (Table \ref{table:crp_comp_infect_vs_other_complications})
+
+\input{Tables/crp_comp_preop_factors}
+\input{Tables/crp_comp_infect_vs_other_complications}
+
 
 %CRP trends and pancreatic fistula
-Postoperative CRP levels on days 2 through 7 were significantly higher in patients who developed a postoperative pancreatic fistula. However, CRP levels in the first postoperative week were not associated with the clinical severity of the pancreatic fistula. These results are presented in Table \ref{table:crp_comp_vs_POPF_ISGPS_p_values_only} and Fig. \ref{fig:crp_comp_crp_popf}. Fig. \ref{fig:crp_comp_crp_popf_isgps} shows that CRP levels were not significantly different between the different grades of pancreatic fistula while CRP levels in patients who did not develop a pancreatic fistula had significantly lower CRP levels.
+Postoperative CRP levels on days 2 through 7 were significantly higher in patients who developed a postoperative pancreatic fistula (p = 0.002 for CRP on Day 2 and p<0.001 for CRP on Days 3 through 7, Mann-Whitney U test). 
+However, CRP levels in the first postoperative week were not associated with the clinical severity of the pancreatic fistula. These results are presented in Table \ref{table:crp_comp_vs_POPF_ISGPS_p_values_only} and Fig. \ref{fig:crp_comp_crp_popf} on p\pageref{fig:crp_comp_crp_popf}. Fig. \ref{fig:crp_comp_crp_popf_isgps} shows that CRP in the first postoperative week was not signficantly different between postoperative pancreatic fistulae of ISGPS Grade A, B and C. 
+
+However, there is no useful clinical application for the association between CRP in the early postoperative period and  pancreatic fistula as the diagnosis of POPF is based on the the amylase content in surgical drains on the third postoperative day. Moreover, early postoperative CRP did not predict the severity of the pancreatic fistula either.
+
+The role of early postoperative CRP in predicting other infectious complications in the 137 patients who did not develop a POPF was analysed. The median CRP levels on or after postoperative day 3 were significantly higher in patients who developed clinically significant infectious complications in the absence of a POPF (Fig. \ref{fig:crp_comp_infectious_leak0}). Moreover, the median difference in CRP also increases from 56 mg/dl on the third day to 79 mg/dl on the seventh day. However, there was no such association in patients who did develop a POPF (Fig. \ref{fig:crp_comp_infectious_leak1}).  For instance, difference in median CRP on Day 4 in patients who did not develop a POPF and did not have an infectious complication was 97 mg/dl (IQR 71 - 174) but was 173 mg/dl if they had an infectious complication. (p$<$0.001). However, in patients who had POPF, the CRP on day 4 was 214 mg/dl (IQR 151 - 250) in the absence of infectious complications and 190 mg/dl (IQR 137 - 252) in the presence of infectious complications. (p = 0.559)
+
+Therefore, CRP on or after the third postoperative day appears to be useful in predicting infectious complications only in patients who did not develop a POPF and these results are shown in Table \ref{table:crp_comp_vs_infections_popf_y1n0} and Fig. \ref{fig:crp_comp_infectious_leak} on p\pageref{fig:crp_comp_infectious_leak}. 
+
+Receiver operating characteristic (ROC) analysis was undertaken in patients without POPF to find the optimum threshold of CRP that was associated with infectious complications. The area under curve (AUC) was significantly higher than 0.5 for CRP on days 3 though 7. The optimum thresholds alongwith the corresponding sensitivity, specificity, negative predictive value, postive predictive value, 95\% confidence intervals (CI) and p-values are shown in Table \ref{table:crp_comp_ROC_infections_noPOPF} and the corresponding ROC curves are shown in Fig. \ref{fig:crp_comp_ROC_infection} on p\pageref{fig:crp_comp_ROC_infection}.
+
+The thresholds were identified with a bias towards a higher negative predictive value to allow identification of patients who did not develop an infectious complication. A CRP level of 125 mg/dl had a sensitivity of 74\% and specificity of 64\% with a negative predictive value of 83\% for predicting infectious complications. The AUC improved to 0.80 on day 7, with corresponding sensitivity, specificity and negative predictive values of 65\%, 81\% and 87\% respectively.
 
 %SPSS results and graphs are stored in crp_complications_graphs_etc.spv file
-
 %========================CRP vs POPF============================================
 %CRP trends in a 2-panel figure and table showing p-values below it
 \clearpage
@@ -62,9 +88,6 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 
 %Ability of CRP to predict infectious complications in leak vs. no leak complications
 %Rationale - POPF is diagnosed with a separate definition - ISGPS on Day 3. Therefore, there is no role for CRP in diagnosing POPF. Above results show that it does not discriminate between the grades either. Therefore, the following analysis is to find out if the first week CRP has any role in predicting other outcome measures.
-
-
-
 
 %========================CRP vs Infections====================================
 %CRP trends vs infections in patients with or without popf in a 2-panel figure and table showing median, iqr and p-values below it
@@ -138,6 +161,5 @@ Postoperative CRP levels on days 2 through 7 were significantly higher in patien
 %Quick analysis of CPET vs postop CRP - maybe one table
 %ROC analysis of CRP vs LOS
 %Multivariate analysis of CRP as continuous or categorical vs complications, 
-
 \clearpage
 \section{Discussion}
