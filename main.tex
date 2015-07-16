@@ -100,7 +100,7 @@
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
-\setstretch{2.0} % Line spacing of 2.0 although I have set \doublespace set somewhere else
+\setstretch{1.5} % Line spacing of 1.5 although I have set \doublespace set somewhere else - not sure where
 
 % Define the page headers using the FancyHdr package and set up for one-sided printing
 \fancyhead{} % Clears all page headers and footers
@@ -200,9 +200,11 @@ To be finalised...
 \lhead{\emph{Contents}} % Set the left side page header to "Contents"
 \tableofcontents % Write out the Table of Contents
 
+\clearpage
 \lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
 \listoffigures % Write out the List of Figures
 
+\clearpage
 \lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
 \listoftables % Write out the List of Tables
 
@@ -258,13 +260,13 @@ University Department of Surgery, Glasgow Royal Infirmary
 \pagestyle{fancy} % Return the page headers back to the "fancy" style
 
 % Include the chapters of the thesis as separate files from the Chapters folder
-%\input{Chapters/Introduction} 		%1
-%\input{Chapters/CPET_Outcomes} 	%2
-%\input{Chapters/CPET_Jaundice} 	%3
-%\input{Chapters/BodyComp}			%4
-%\input{Chapters/CPET_Survival}		%5
+\input{Chapters/Introduction} 		%1
+\input{Chapters/CPET_Outcomes} 	%2
+\input{Chapters/CPET_Jaundice} 	%3
+\input{Chapters/BodyComp}			%4
+\input{Chapters/CPET_Survival}		%5
 \input{Chapters/CRP_Complications}	%6
-%\input{Chapters/Discussion}		%7
+\input{Chapters/Discussion}		%7
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
@@ -274,8 +276,8 @@ University Department of Surgery, Glasgow Royal Infirmary
 
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
 
-%\input{Appendices/AppendixExcelMacros}
-%\input{Appendices/AppendixCPETRawData}
+\input{Appendices/AppendixExcelMacros}
+\input{Appendices/AppendixCPETRawData}
 %\input{Appendices/AppendixC}
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
