@@ -46,12 +46,12 @@
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
 
 \newcommand\Declaration[1]{
-\btypeout{Declaration of Authorship}
-\addtotoc{Declaration of Authorship}
+\btypeout{Declaration}
+\addtotoc{Declaration}
 \thispagestyle{plain}
 \null\vfil
 %\vskip 60\p@
-\begin{center}{\huge\bf Declaration of Authorship\par}\end{center}
+\begin{center}{\huge\bf Declaration\par}\end{center}
 %\vskip 60\p@
 {\normalsize #1}
 \vfil\vfil\null
@@ -84,11 +84,17 @@
                { 0.3in}  % foot sep
 %----------------------------------------------------------------------------------------
 \raggedbottom
+%\usepackage[document]{ragged2e} %Try left align
+\raggedright
 \setlength{\topskip}{1\topskip \@plus 5\p@}
-\doublehyphendemerits=10000       % No consecutive line hyphens.
-\brokenpenalty=10000              % No broken words across columns/pages.
-\widowpenalty=9999                % Almost no widows at bottom of page.
-\clubpenalty=9999                 % Almost no orphans at top of page.
+\usepackage[none]{hyphenat} %http://tex.stackexchange.com/questions/5036/how-to-prevent-latex-from-hyphenating-the-entire-document
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\righthyphenmin=62
+%\doublehyphendemerits=10000       % No consecutive line hyphens.
+%\brokenpenalty=10000              % No broken words across columns/pages.
+%\widowpenalty=9999                % Almost no widows at bottom of page.
+%\clubpenalty=9999                 % Almost no orphans at top of page.
 \interfootnotelinepenalty=9999    % Almost never break footnotes.
 \usepackage{fancyhdr}
 \lhead[\rm\thepage]{\fancyplain{}{\sl{\rightmark}}}
@@ -181,7 +187,7 @@
 %	defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{An investigation of preoperative cardiopulmonary exercise testing in patients undergoing major pancreatic surgery.} % Your thesis title - this is used in the title and abstract
+\thesistitle{An investigation of the clinical utility of preoperative cardiopulmonary exercise testing in patients undergoing major pancreatic surgery.} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
 \supervisor{Prof. Donald C \textsc{McMillan}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
