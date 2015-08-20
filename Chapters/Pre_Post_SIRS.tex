@@ -1,7 +1,7 @@
 \chapter{An investigation into the relationship between preoperative clinico-pathological characteristics and post-operative systemic inflammatory response in patients undergoing pancreaticoduodenectomy.}
-\label{ch_bodycomp}
+\label{ch_pre_post_sirs}
 
-\lhead{Chapter \ref{ch_bodycomp}. \emph{Factors affecting post-operative systemic inflammation}} % This is for the header on each page - perhaps a shortened title
+\lhead{Chapter \ref{ch_pre_post_sirs}. \emph{Factors affecting post-operative systemic inflammation}} % This is for the header on each page - perhaps a shortened title
 
 \clearpage
 %----------------------------------------------------------------------------------------
@@ -16,7 +16,8 @@ Preoperative CRP levels have also been reported to be associated with increased 
 Moreover, an exaggerated postoperative systemic inflammatory response in the first few days after surgery is associated with increased incidence of infective complications after a wide variety of thoraco-abdominal procedures\parencite{platt_c-reactive_2012, dutta_persistent_2011, welsch_persisting_2008} as well as other types of surgery\parencite{mcneer_early_2010, laporta_baez_c-reactive_2011}.
 The magnitude of this postoperative inflammatory response has also been reported to be associated with the severity of the complications \parencite{mcsorley_postoperative_2015}. 
 
-In patients undergoing pancreaticoduodenectomy, preoperative systemic inflammation may be affected by several factors including the presence of obstructive jaundice with or without cholangitis, preoperative biliary intervention including endoscopic retrograde cholangio-pancreatography for diagnosis or biliary drainage and in some patients acute or chronic pancreatitis either due to obstruction of the main pancreatic duct or due to other causes. 
+In patients undergoing pancreaticoduodenectomy, preoperative systemic inflammation may be affected by several factors. 
+These include the presence of obstructive jaundice with or without cholangitis, preoperative biliary intervention including endoscopic retrograde cholangio-pancreatography for diagnosis or biliary drainage and in some patients acute or chronic pancreatitis either due to obstruction of the main pancreatic duct or due to other causes. 
 The effect this `priming' of the immune system on postoperative outcomes is poorly understood in this cohort of patients. 
 
 Chronic inflammation is a recognised feature of obesity which is increasingly common in patients undergoing major surgery for pancreatic and other gastro-intestinal cancers. 
@@ -35,8 +36,84 @@ The aim of this study was to examine the relationship between patient factors in
 
 
 \section{Methods}
+Patients who underwent elective pancreaticoduodenectomy between January 2008 and July 2012 at the West of Scotland Pancreatic Unit at the Glasgow Royal Infirmary were included in this study. 
+Patients who underwent only a trial dissection or palliative surgical bypass for unresectable disease during this period were excluded.
+
+Routine preoperative blood tests including full blood count, liver function tests and serum C-reactive protein were performed in all patients on the day before surgery. 
+These blood tests were also repeated every day for at least the first postoperative week. 
+These results were collected from the hospital laboratory database using an automated MS Access application as outlined in Appendix \ref{AppendixAccessDatabase}. 
+The modified Glasgow Prognostic Score (mGPS) was calculated as shown in Table \ref{table:mGPS} on p\pageref{table:mGPS} in Chapter \ref{ch_intro}. 
+The neutrophil-lymphocyte ratio was calculated by dividing the preoperative neutrophil count by the preoperative lymphocyte count and a threshold of 5.0 was used to dichotomise this variable. 
+Standard thresholds were used to categorise other biochemical parameters. 
+Obstructive jaundice was defined as serum bilirubin $>$35 $\mu$mol/L while severe obstructive jaundice was defined as serum bilirubin $>$250 $\mu$mol/L. 
+
+Body Mass Index (BMI) was categorised using the World Health Organisation thresholds as shown in Table \ref{table:bmi_who} on p\ref{table:bmi_who} in Chapter \ref{ch_intro}. 
+Only one patient had a BMI less than 18.5 kg/m$2$ and was excluded from analysis involving BMI.
+The Scottish Index of Multiple Deprivation (SIMD) Quintile Scores were calculated from the post-code of the patient's primary residence and dichotomised into two groups with scores of 1-3 and 4-5 respectively.
+The POSSUM Physiology Score was calculated based on 11 physiological parameters (cardiac disease including hypertension, ischaemic heart disease and heart failure, respiratory disease causing breathlessness on exertion and COPD, ECG changes, pulse rate, blood pressure, haemoglobin, white cell count, serum sodium, serum potassium, serum urea and Glasgow Coma Scale) as described in Table \todo{Create a table for PPS in introduction and reference it wherever necessary}.
+
+
+In patients who underwent cardiopulmonary exercise testing, $\dot{V}_{O_2}$AT and $\dot{V}_{O_2}$Peak were compared against postoperative systemic inflammation. 
+$\dot{V}_{O_2}$AT was dichotomised using a value of 10 mls/kg/min while $\dot{V}_{O_2}$Peak was dichotomised using a value of 16 mls/kg/min. 
+Cardiopulmonary exercise testing methodology has been described in Section \ref{sec:cpx_method}.
+
+Body composition was calculated in a subset of these patients using preoperative computed tomography of the abdomen. 
+The methodology used in the calculation of the individual components of body composition including visceral fat, subcutaneous fat and skeletal muscle is described in detail in Section \ref{sec:bodycomp_calculation}. 
+%Check this with Donny
+Continuous data were converted into categorical data using tertiles.
+
+\subsection{Statistics}
+
+Continuous variables are reported as median (inter-quartile range).
+Non-parametric tests were used to compare postoperative inflammatory markers (continuous data) with preoperative clinico-pathological characteristics (categorical data). 
+Mann-Whitney U test was used when two categories were present and Kruskal-Wallis test was used when more than two categories were present.
+
+Line-plots were created comparing the trend of inflammatory markers during the first postoperative week with preoperative systemic inflammation, obstructive jaundice and $\dot{V}_{O_2}$AT with error bars representing 95\% confidence intervals. 
+
+SPSS software (Version 22.0; IBM, USA) was used to perform statistical analysis. Effects were considered significant at $\alpha \leq0.05$. 
 
 \section{Results}
+
+Pancreaticoduodenectomy was performed in 188 patients (126 male, 67\%) during the study period.
+Preoperative C-reactive protein was elevated in 70 (37.6\%) patients while just over half the patients had a low preoperative serum albumin (96, 51.1\%). 
+The modified Glasgow Prognostic Score revealed normal preoperative systemic inflammatory status (mGPS = 0) in 116 (62.4\%) patients, mildly systemic inflammation in 16 (8.6\%) and severe inflammation in 54 (29.0\%) patients. 
+Obstructive jaundice was present in 44 (23.4\%) patients and severe obstructive jaundice was present in 31 (16.5\%) of patients. 
+BMI data was available in 167 patients. More than half of these patients were overweight or obese with a BMI $>$ 25 in 87 (52.1\%) patients.
+
+Cardiopulmonary exercise testing was performed in 130 patients. 
+$\dot{V}_{O_2}$AT could not be estimated in one patient.
+$\dot{V}_{O_2}$AT was less than 10 ml/kg/min in 52 (40\%) of patients indicating reduced aerobic capacity in these patients.
+All the variables necessary for calculation of the POSSUM Physiology Score, a composite score of comorbidity and preoperative biochemistry, were available in 180 patients and it was elevated in 87 (48.3\%) patients.
+
+The relationship between preoperative clinico-pathological characteristics and postoperative C-reactive protein levels (median, IQR in Table \ref{table:sirs_crp}, p-values in Table \ref{table:sirs_crp_pvalues}), postoperative serum albumin (median, IQR in Table \ref{table:sirs_alb}, p-values in Table \ref{table:sirs_alb_pvalues}), postoperative total white cell count (median, IQR in Table \ref{table:sirs_wcc}, p-values in Table \ref{table:sirs_wcc_pvalues}) and postoperative differential neutrophil count (median, IQR in Table \ref{table:sirs_neut}, p-values in Table \ref{table:sirs_neut_pvalues}) are presented.
+
+The relationship between preoperative CRP and postoperative systemic inflammation is also depicted graphically in Fig. \ref{fig:sirs_crp}. 
+The median CRP levels on the day of surgery and the first postoperative day (POD) were significantly higher in patients who had an elevated preoperative CRP. 
+However, this association was not present after the first postoperative day.
+Elevated preoperative CRP was associated with a persistently lower serum albumin level for the entire duration of the first postoperative week (p$<$0.001 to p$<$0.002).
+It was also associated with a higher total white cell count (p$<$0.01) and higher differential neutrophil count (p$<$0.01) from the 3$^{rd}$ to 6$^{th}$ postoperative days with a less but still significant association on the 7$^{th}$ postoperative day. 
+
+Preoperative hypoalbuminemia on the other hand was associated with lower median postoperative CRP levels starting with POD 3. 
+The median difference in postoperative CRP increased from 30 mg/dl on POD 3 (p$<$0.045) to 53 mg/dl by POD 6 (p=0.002) with patients with hypoalbuminemia having a lower CRP. 
+This relationship is shown in Fig. \ref{fig:sirs_alb_crp}.
+Preoperative hypoalbuminemia persisted postoperatively throughout the first week (p$<$0.001, Fig. \ref{fig:sirs_alb_alb}).
+There was no relationship between preoperative serum albumin levels and postoperative white cell count (Fig. \ref{fig:sirs_alb_wcc}) or neutrophil count (Fig. \ref{fig:sirs_alb_neut}).
+
+Obstructive jaundice was associated with significant differences in the postoperative systemic inflammatory response. 
+Postoperative serum albumin levels were lower in jaundiced patients and with the severely jaundiced patients having the lowest levels (p$<$0.001, Fig. \ref{fig:sirs_bil_alb}). 
+There were no significant changes in the trends of albumin levels and it is likely that preoperative hypoalbuminemia persisted postoperatively in these patients. 
+
+However, the trends in postoperative CRP were significantly different between the jaundiced and non-jaundiced patients. 
+Obstructive jaundice was associated with a significantly lower peak CRP on POD 2 (p=0.001) and this persisted until POD 6 (p=0.005, Table \ref{table:sirs_crp}, \ref{table:sirs_crp_pvalues}).
+Median postoperative CRP had an inverse relationship with severity of preoperative obstructive jaundice (Fig. \ref{fig:sirs_bil_crp}).
+Obstructive jaundice was also associated with a delayed rise in the white cell count and neutrophil count on POD 6 (p$<$0.05) and POD 7 (p$<$0.05) although these relationships were less significant (Fig. \ref{fig:sirs_bil_wcc} and Fig. \ref{fig:sirs_bil_neut}). 
+
+There was no significant relationship between $\dot{V}_{O_2}$AT, $\dot{V}_{O_2}$Peak and postoperative CRP, white cell count or neutrophil count. 
+Serum albumin levels were lower in patients with $\dot{V}_{O_2}$AT$<$10 mls/kg/min (Fig. \ref{fig:sirs_at}).
+
+There was no significant and persistent relationship between postoperative CRP, white cell count and neutrophil count and preoperative neutrophil-lymphocyte ratio, SIMD score, body mass index, preoperative haemoglobin levels or the POSSUM Physiology score. 
+However, postoperative hypoalbuminemia was associated with all the preoperative characteristics studied with the exception of BMI and SIMD (Table \ref{table:sirs_alb} and Table \ref{table:sirs_alb_pvalues}).
+
 
 \input{Tables/sirs_crp}
 \input{Tables/sirs_albumin}
