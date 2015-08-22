@@ -1,43 +1,38 @@
 \begin{table}[p]
-\centering
-\caption{Parameters measured at spirometry.}
-\label{table:spirometry}
-\begin{tabular}{| m{2cm}  m{2cm}  m{7cm} |}
-	\hline
-	Parameter & Units  & Description                          \\ \hline
-	FVC       & litres & Forced Vital Capacity                \\
-	FEV1      & litres & Forced Expiratory Volume in 1 second \\
-	FEV1/FVC  & \%     & Tiffeneau-Pinelli[1] index           \\ \hline
-\end{tabular}
-
-\vspace{2cm}
-
-
-\caption{Common parameters measured at cardiopulmonary exercise testing.}
-\label{table:cpet_parameters}
-\begin{tabular}{| m{2cm}  m{2cm}  m{7cm} |}
-	\hline
-	Parameter & Units       & Description                                  \\ \hline
-	\%peakVO2 & \%          & VO2 as a \% of predicted VO2Peak             \\
-	Load      & Watts       & Exercise Workload                            \\
-	VE        & litres/min  & Ventilatory Equivalent                       \\
-	Vt        & litres      & Tidal volume                                 \\
-	VO2       & litres/min  & Absolute Oxygen uptake/consumption           \\
-	VO2/kg    & ml/(kg*min) & Corrected Oxygen uptake/consumption          \\
-	VE/VO2    &             & Ventilatory Equivalent for O$_2$             \\
-	VCO2      & litres/min  & Carbon-dioxide output                        \\
-	VE/VCO2   &             & Ventilatory Equivalent for CO$_2$            \\
-	RER       &             & Respiratory Exchange Ratio                   \\
-	PETO2     & mmHg        & End Tidal O2                                 \\
-	PETCO2    & mmHg        & End Tidal CO2                                \\
-	O2Pulse   & ml/beat     & Oxygen pulse                                 \\
-	HR        & beats/min   & Heart Rate                                   \\
-	Bf        & /min        & Breathing Frequency                          \\
-	P(A-a)O2  & mmHg        & Alveolar-arterial PO2 difference             \\
-	Vd/Vt     &             & Physiologic dead space-to-tidal volume ratio \\
-	SBP       & mmHg        & Systolic blood pressure                      \\
-	DBP       & mmHg        & Diastolic blood pressure                     \\
-	O2sat     & \%          & Oxygen saturation                            \\ \hline
-\end{tabular}
+	\centering
+	\caption{Parameters measured at spirometry.}
+	\label{table:spirometry}
+	\renewcommand{\arraystretch}{1.5} %Increases space between rows
+	\setlength{\tabcolsep}{10pt} %sets the space between columns
+	\begin{tabular}{| m{2cm}  m{2cm}  m{7.7cm} |}
+		\hline
+		Parameter & Units  & Description                          \\ \hline
+		FVC       & litres & Forced Vital Capacity                \\
+		FEV1      & litres & Forced Expiratory Volume in 1 second \\
+		FEV1/FVC  & \%     & Tiffeneau-Pinelli index              \\ \hline
+	\end{tabular}
+	
+	\vspace{2cm}
+	
+	\caption{Common parameters measured at cardiopulmonary exercise testing.}
+	\label{table:cpet_parameters}
+	\begin{tabular}{| m{2cm}  m{2cm}  m{7.7cm} |}
+		\hline
+		Parameter                  & Units      & Description                         \\ \hline
+		Load                       & Watts      & Exercise Workload                   \\
+		$\dot{V}_E$                & litres/min & Ventilatory Equivalent              \\
+		Vt                         & litres     & Tidal volume                        \\
+		$\dot{V}_{O_2}$            & litres/min & Absolute Oxygen uptake/consumption  \\
+		$\dot{V}_{O_2}$/kg         & ml//kg/min & Corrected Oxygen uptake/consumption \\
+		$\dot{V}_E/\dot{V}_{O_2}$  &            & Ventilatory Equivalent for $O_2$    \\
+		$\dot{V}_{CO_2}$           & litres/min & Carbon-dioxide output               \\
+		$\dot{V}_E/\dot{V}_{CO_2}$ &            & Ventilatory Equivalent for $CO_2$   \\
+		RER                        &            & Respiratory Exchange Ratio          \\
+		$PET_{O_2}$                & mmHg       & End Tidal $O_2$                     \\
+		$PET_{CO_2}$               & mmHg       & End Tidal $CO_2$                    \\
+		${O_2}$Pulse               & ml/beat    & Oxygen pulse                        \\
+		HR                         & beats/min  & Heart Rate                          \\
+		$B_f$                      & resps/min  & Breathing Frequency                 \\ \hline
+	\end{tabular}
 
 \end{table}
