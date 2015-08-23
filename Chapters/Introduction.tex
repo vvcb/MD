@@ -204,7 +204,6 @@ While some authors have reported it to be useful in predicting postoperative out
 The physiology component of the POSSUM score (POSSUM Physiology Score, PPS) which takes into account both comorbidity and specific preoperative biochemical parameters was used as an objective static measure of comorbidity in this thesis. 
 The POSSUM Physiology Score has been reported to be associated with preoperative systemic inflammation and cancer-specific survival in patients who underwent potentially curative surgery for colorectal cancer \parencite{richards_relationship_2010}.
 The variables used in the calculation of the POSSUM Physiology Score are shown in Table \ref{table:intro_possum} on p\pageref{table:intro_possum}.
-As the Glasgow Coma Scale in all patients undergoing pancreaticoduodenectomy was 15, this variable was excluded in the calculation of the score in this thesis.
 
 \input{Tables/c1_possum}
 
@@ -353,7 +352,7 @@ This allows accurate measurement of work load in Watts.
 The relationship between $\dot{V}_{O_2}$ and work rate is usually linear and the slope of this relationship is independent of sex, age or height. 
 An abnormality in this relationship is usually due to cardiopulmonary or circulatory causes.
 
-\subsection{Minute ventilation}
+\subsection[Minute ventilation]{Minute ventilation, $\dot{V}_E$}
 Minute ventilation or respiratory minute volume ($\dot{V}_E$) is the volume of air that is inhaled/expired in a minute.
 \begin{equation} \label{eq:VE=VTxBf}
 	\dot{V}_E = \dot{V}_T \times Bf
@@ -363,7 +362,7 @@ where $\dot{V}_T$ = Tidal Volume and $Bf$ = Breathing Frequency.
 Increasing $\dot{V}_E$ is one of the main mechanisms involved in increasing oxygen delivery during exercise. 
 It is also an important factor in clearing $CO_2$ from the blood.
 
-\subsection{Oxygen uptake}
+\subsection[Oxygen Uptake]{Oxygen Uptake, $\dot{V}_{O_2}$}
 
 $\dot{V}_{O_2}$ or oxygen uptake is measured breath-by-breath using digital analysis of the inspired and expired gases. 
 This is then averaged, usually over time, to smooth-out any signficant breath-by-breath variation. $\dot{V}_{O_2}$ increases with increasing work load and is influenced by several factors that have a role in the transport and utilisation of oxygen. 
@@ -390,7 +389,7 @@ However, ventilation, pulmonary blood flow, gas-exchange across the alveolar mem
 The quality of the peripheral circulation, both anatomical and its physiologic response to exercise which involves redistribution of blood flow to exercising muscle, has an important role in increasing availability of oxygen. 
 The oxygen carrying capacity of blood determined by haemoglobin concentration, its saturation and the $O_2$ dissociation curve as well as the ability of tissues to extract and utilise oxygen are equally important factors that influence $\dot{V}_{O_2}$.
 
-\subsection{Oxygen pulse}
+\subsection[Oxygen pulse]{Oxygen pulse, $O_2Pulse$}
 $O_2Pulse$ is defined as the oxygen uptake per heart beat.
 \begin{equation} \label{eq:oxygen_pulse}
 	O_2Pulse = \frac{\dot{V}_{O_2}}{Heart\ rate}
@@ -398,41 +397,46 @@ $O_2Pulse$ is defined as the oxygen uptake per heart beat.
 While some authors have suggested that oxygen pulse may be a surrogate for stroke volume others disagree. 
 The clinical application of oxygen pulse in surgical patients remains unclear.
 
-\subsection{Respiratory exchange ratio}
-The ratio of $\dot{V}_{CO_2}/\dot{V}_{O_2}$ is called the Respiratory Exchange Ratio (RER). 
+\subsection[Respiratory Exchange Ratio]{Respiratory Exchange Ratio, RER}
+The ratio of $\dot{V}_{CO_2}/\dot{V}_{O_2}$ is called the Respiratory Exchange Ratio. 
 An RER greater that 1.0 may be caused either by lactic acidosis or due to hyperventilation. 
 The RER is also a marker of the fuel being used for metabolism with RER less than 1.0 indicating mixed fuel source in the form of carbohydrate and fat while an RER of 1.0 or greater indicates a primarily carbohydrate source.
 
-\subsection{Ventilatory equivalents}
-The changes in the ventilatory equivalents for $O_2$ ($\dot{V}_E/\dot{V}_{O_2}$) and $CO_2$ ($\dot{V}_E/\dot{V}_{CO_2}$) during exercise provide valuable information regarding the ventilatory response to exercise. 
+\subsection[Ventilatory Equivalent for O2 and CO2]{Ventilatory Equivalent for $O_2$ and $CO_2$, $\dot{V}_E/\dot{V}_{O_2}$, $\dot{V}_E/\dot{V}_{CO_2}$}
+The changes in $\dot{V}_E/\dot{V}_{O_2}$ and $\dot{V}_E/\dot{V}_{CO_2}$ during exercise provide valuable information regarding the ventilatory response to exercise. 
 Both $\dot{V}_E/\dot{V}_{O_2}$ and $\dot{V}_E/\dot{V}_{CO_2}$ tend to decrease initially during exercise. 
 However, as the anaerobic threshold is passed, $\dot{V}_E/\dot{V}_{O_2}$ starts increasing before $\dot{V}_E/\dot{V}_{CO_2}$. 
 This change in direction is yet another method to confirm the anaerobic threshold. $\dot{V}_E/\dot{V}_{CO_2}$ eventually starts increasing as respiratory compensation of metabolic acidosis results in increased $\dot{V}_E$.
 
-\subsection{End-tidal oxygen and CO2} 
+\subsection[End-tidal O2, CO2]{End-tidal $O_2$ and $CO_2$, $P_{ET_{O_2}}$, $P{ET_{CO_2}}$}
 $PET_{O_2}$ and $PET_{CO_2}$ are the partial pressures of $O_2$ and $CO_2$ at the end of an exhaled breath and are closely related to $P_aO_2$ and $P_aCO_2$ respectively. $P{ET_{CO_2}}$ is dependent on pulmonary gas-exchange which is in turn influenced by the right ventricular output, pulmonary blood flow and alveolar gas exchange. 
 The changes in $P_{ET_{O_2}}$ and $P{ET_{CO_2}}$ during exercise help identify ventilation-perfusion mismatch as well as hyperventilation.
 
-\subsection{Heart rate}
+\subsection[Heart Rate]{Heart Rate, HR}
 \label{sec:heart_rate}
 The heart rate response during exercise in healthy individuals is a linear function of $\dot{V}_{O_2}$ increasing linearly with increasing work load and increasing $\dot{V}_{O_2}$. 
 The difference between the predicted peak heart rate and the observed peak heart rate is called the Heart Rate Reserve or HRR. 
 Failure to achieve the predicted peak heart rate or a wide HRR may be due to cardiac disease or due to medication used to treat cardiovascular disorders such as beta-blockers or calcium-channel blockers. 
 This information in conjunction with 12-lead ECG evidence of ischaemia provides undeniable evidence of primary cardiac dysfunction.
 
-\subsection{Breathing frequency}
-In healthy individuals, breathing frequency ($B_f$) is one of the most important respiratory responses to exercise in order to increase oxygen uptake. 
+\subsection[Breathing frequency]{Breathing frequency, $B_f$}
+In healthy individuals, breathing frequency is one of the most important respiratory responses to exercise in order to increase oxygen uptake. 
 However, a variety of respiratory disorders including chronic obstructive pulmonary disease or restrictive disorders such as interstitial lung disease can impair this response. 
 Morbidly obese patients may also have additional restrictions on respiratory response due to their body habitus. 
 On the other hand, hyperventilation in an otherwise healthy patient may make interpretation of the results difficult although the analysis of trends in other parameters such as $P_{ET_{O_2}}$ and $P{ET_{CO_2}}$ aids in the diagnosis of hyperventilation versus true respiratory problems.
 
 \section{Role of CPET in preoperative assessment}
 \label{sec:cpx_roleInAssessment}
-\subsection{General surgery}
+\subsection{General Surgery}
 
 Several studies over the past 2 decades have established the value of cardiopulmonary exercise testing in patients, especially elderly, undergoing major abdominal surgery. 
+Older and co-workers conducted a prospective study of 187 patients over the age of 60 undergoing major abdominal surgery. 
+All patients underwent a symptom-limited exercise test on a cycle ergometer with real-time 12-lead ECG monitoring. 
+The average $\dot{V}_{O_2}$ across all patients was 12.4 ml/min/kg. 
+There were a total of 11 deaths related to cardiovascular causes (5.9\%) and 3 deaths due to non-cardiovascular causes. 
+They reported that 10 out of the 11 deaths due to cardiovascular causes occurred in patients with $\dot{V}_{O_2}AT<11$ml/kg/min (n=55) while only one patient in the group with $\dot{V}_{O_2}AT\geq11$ml/kg/min (n=132) died of cardiovascular complications (18\% vs 0.8\%, $p<0.001$). 
+Eight out of the 10 patients in the low $\dot{V}_{O_2}$AT group who died also had evidence of myocardial ischaemia ($p<0.01$) \parencite{older_preoperative_1993}. 
 
-Older and co-workers first reported on the value of cardiopulmonary exercise testing for preoperative risk assessment in a prospective study of 187 patients over the age of 60 undergoing major abdominal surgery  \parencite{older_preoperative_1993}. 
 In a later, larger prospective study of 548 patients who underwent major abdominal surgery including colorectal and abdominal aneurysm surgery, they used a risk stratification system that combined $\dot{V}_{O_2}AT<11$ml/kg/min, $\dot{V}_E/\dot{V}_{CO_2}>35$ and evidence of myocardial ischaemia during exercise. 
 High risk patients ($\dot{V}_{O_2}AT<11$ml/kg/min, n=153) were admitted to intensive care after surgery and had a mortality due to cardiovascular causes of 4.6\%. 
 Moderate risk group ($\dot{V}_{O_2}AT>11$ml/kg/min and either $\dot{V}_E/\dot{V}_{CO_2}>35$ or evidence of myocardial ischaemia, n=115) was managed in the high dependency unit after surgery and had a cardiovascular mortality of 1.7\%. 
