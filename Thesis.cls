@@ -87,10 +87,12 @@
 %\usepackage[document]{ragged2e} %Try left align
 \raggedright
 \setlength{\topskip}{1\topskip \@plus 5\p@}
-\usepackage[none]{hyphenat} %http://tex.stackexchange.com/questions/5036/how-to-prevent-latex-from-hyphenating-the-entire-document
-\hyphenpenalty=10000
-\exhyphenpenalty=10000
-\righthyphenmin=62
+%\usepackage[none]{hyphenat} %http://tex.stackexchange.com/questions/5036/how-to-prevent-latex-from-hyphenating-the-entire-document
+%\hyphenpenalty=10000
+%\exhyphenpenalty=10000
+%\righthyphenmin=62
+
+
 %\doublehyphendemerits=10000       % No consecutive line hyphens.
 %\brokenpenalty=10000              % No broken words across columns/pages.
 %\widowpenalty=9999                % Almost no widows at bottom of page.
