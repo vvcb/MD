@@ -5,14 +5,13 @@
 %------------------------------------------
 
 \setstretch{1.0}
-The following VBA code was written by me to facilitate detailed analysis of large volumes of raw CPET data that would not have been otherwise available from the final report generated for clinical use. Where necessary, I have used information from the MSDN knowledgebase and internet fora to supplement my knowledge of coding.
+The following VBA code was written to facilitate detailed analysis of large volumes of raw CPET data that would not have been otherwise available from the final report generated for clinical use. This allowed analysis of all parameters measured at rest, anaerobic threshold and peak exercise rather than just $\dot{V}_{O_2}$.
 
 \begin{lstlisting}
 Option Explicit
 Sub RenameSortSheets() 
    Dim ws As Worksheet
    Dim strName() As String
- 
    For Each ws In Worksheets
      If ws.Range("$B$1").Value="" Then
        Exit Sub
@@ -25,15 +24,12 @@ Sub RenameSortSheets()
        ActiveWindow.FreezePanes=True
      End If
    Next ws
- 
    Dim N As Integer
    Dim M As Integer
    Dim FirstWSToSort As Integer
    Dim LastWSToSort As Integer
    Dim SortDescending As Boolean
- 
    SortDescending=False
-   
    If ActiveWindow.SelectedSheets.Count=1 Then
      'Change the 1 to the worksheet you want sorted first
      FirstWSToSort=1
@@ -45,13 +41,11 @@ Sub RenameSortSheets()
            MsgBox "You cannot sort non-adjacent sheets"
            Exit Sub
          End If
-       Next N
-  
+       Next N 
        FirstWSToSort=.Item(1).Index
        LastWSToSort=.Item(.Count).Index
      End With
    End If
-   
    For M=FirstWSToSort To LastWSToSort
      For N=M To LastWSToSort
        If SortDescending=True Then
@@ -65,7 +59,6 @@ Sub RenameSortSheets()
        End If
      Next N
    Next M
-   
    Dim x As Integer
    x=2
    Sheets("aaa_main").Range("A:A").Clear
@@ -75,7 +68,6 @@ Sub RenameSortSheets()
      x=x + 1
    Next ws
 End Sub
-
 Sub GotoSheet()
   If ActiveWindow.ActiveSheet.Name="aaa_main" Then
     Dim selName As String
@@ -85,7 +77,6 @@ Sub GotoSheet()
     Worksheets("aaa_main").Activate
   End If
 End Sub
-
 Sub VCO2VO2()
   Dim ws As Worksheet
   For Each ws In Worksheets
@@ -99,7 +90,6 @@ Sub VCO2VO2()
     Wend
   Next ws  
 End Sub
-
 Sub ClearColumn()
   Dim ws As Worksheet
   For Each ws In Worksheets
@@ -107,7 +97,6 @@ Sub ClearColumn()
     ws.Range("A1").Clear
   Next ws
 End Sub
-
 Sub DeleteAllCharts()
   Dim ws As Worksheet
   Dim chart As ChartObject
@@ -117,7 +106,6 @@ Sub DeleteAllCharts()
     Next chart
   Next ws
 End Sub
-
 Sub AddRCValues()
   Dim x As Integer
   For x=3 To 88
@@ -127,7 +115,6 @@ Sub AddRCValues()
       Sheets("aaa_main").Cells(x, 28).Value
   Next x
 End Sub
-
 Sub CopyLineForSPSS()
   Dim rng As Range
   Dim selrow As Integer
