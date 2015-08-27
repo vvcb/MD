@@ -14,15 +14,15 @@ Sub RenameSortSheets()
    Dim strName() As String
  
    For Each ws In Worksheets
-     If ws.Range("$B$1").Value = "" Then
+     If ws.Range("$B$1").Value="" Then
        Exit Sub
      End If
      If ws.Name <> "aaa_main" Then
-       strName = Split(CStr(ws.Range("$B$1").Value), "(")
-       ws.Name = LCase(strName(0))
+       strName=Split(CStr(ws.Range("$B$1").Value), "(")
+       ws.Name=LCase(strName(0))
        ws.Activate
        ws.Range("B4").Select
-       ActiveWindow.FreezePanes = True
+       ActiveWindow.FreezePanes=True
      End If
    Next ws
  
@@ -32,29 +32,29 @@ Sub RenameSortSheets()
    Dim LastWSToSort As Integer
    Dim SortDescending As Boolean
  
-   SortDescending = False
+   SortDescending=False
    
-   If ActiveWindow.SelectedSheets.Count = 1 Then
+   If ActiveWindow.SelectedSheets.Count=1 Then
      'Change the 1 to the worksheet you want sorted first
-     FirstWSToSort = 1
-     LastWSToSort = Worksheets.Count
+     FirstWSToSort=1
+     LastWSToSort=Worksheets.Count
     Else
      With ActiveWindow.SelectedSheets
-       For N = 2 To .Count
+       For N=2 To .Count
          If .Item(N - 1).Index <> .Item(N).Index - 1 Then
            MsgBox "You cannot sort non-adjacent sheets"
            Exit Sub
          End If
        Next N
   
-       FirstWSToSort = .Item(1).Index
-       LastWSToSort = .Item(.Count).Index
+       FirstWSToSort=.Item(1).Index
+       LastWSToSort=.Item(.Count).Index
      End With
    End If
    
-   For M = FirstWSToSort To LastWSToSort
-     For N = M To LastWSToSort
-       If SortDescending = True Then
+   For M=FirstWSToSort To LastWSToSort
+     For N=M To LastWSToSort
+       If SortDescending=True Then
          If UCase(Worksheets(N).Name) > UCase(Worksheets(M).Name) Then
            Worksheets(N).Move Before:=Worksheets(M)
          End If
@@ -67,19 +67,19 @@ Sub RenameSortSheets()
    Next M
    
    Dim x As Integer
-   x = 2
+   x=2
    Sheets("aaa_main").Range("A:A").Clear
-   Sheets("aaa_main").Cells(1, 1) = "SheetName"
+   Sheets("aaa_main").Cells(1, 1)="SheetName"
    For Each ws In Worksheets
-     Sheets("aaa_main").Cells(x, 1) = ws.Name
-     x = x + 1
+     Sheets("aaa_main").Cells(x, 1)=ws.Name
+     x=x + 1
    Next ws
 End Sub
 
 Sub GotoSheet()
-  If ActiveWindow.ActiveSheet.Name = "aaa_main" Then
+  If ActiveWindow.ActiveSheet.Name="aaa_main" Then
     Dim selName As String
-    selName = ActiveWindow.ActiveCell.Value
+    selName=ActiveWindow.ActiveCell.Value
     Worksheets(selName).Activate
   Else
     Worksheets("aaa_main").Activate
@@ -90,12 +90,12 @@ Sub VCO2VO2()
   Dim ws As Worksheet
   For Each ws In Worksheets
     Dim x As Integer
-    x = 4
+    x=4
     While ws.Cells(x, 2) > 0
       If ws.Cells(x, 9) <> "-" And ws.Cells(x, 6) <> "-" Then
-        ws.Cells(x, 22) = CDbl(ws.Cells(x, 9)) / CDbl(ws.Cells(x, 6))
+        ws.Cells(x, 22)=CDbl(ws.Cells(x, 9)) / CDbl(ws.Cells(x, 6))
       End If
-      x = x + 1
+      x=x + 1
     Wend
   Next ws  
 End Sub
@@ -103,7 +103,7 @@ End Sub
 Sub ClearColumn()
   Dim ws As Worksheet
   For Each ws In Worksheets
-    ws.Range("AD9") = ws.Range("A1")
+    ws.Range("AD9")=ws.Range("A1")
     ws.Range("A1").Clear
   Next ws
 End Sub
@@ -120,10 +120,10 @@ End Sub
 
 Sub AddRCValues()
   Dim x As Integer
-  For x = 3 To 88
-    Sheets(Sheets("aaa_main").Cells(x, 1).Value).Range("AD8") = _
+  For x=3 To 88
+    Sheets(Sheets("aaa_main").Cells(x, 1).Value).Range("AD8")=_
       Sheets("aaa_main").Cells(x, 27).Value
-    Sheets(Sheets("aaa_main").Cells(x, 1).Value).Range("AD9") = _
+    Sheets(Sheets("aaa_main").Cells(x, 1).Value).Range("AD9")=_
       Sheets("aaa_main").Cells(x, 28).Value
   Next x
 End Sub
@@ -132,8 +132,8 @@ Sub CopyLineForSPSS()
   Dim rng As Range
   Dim selrow As Integer
   Dim selrng As String  
-  selrow = ActiveWindow.ActiveCell.Row
-  selrng = "AF" & CStr(selrow) & ":BX" & CStr(selrow)
+  selrow=ActiveWindow.ActiveCell.Row
+  selrng="AF" & CStr(selrow) & ":BX" & CStr(selrow)
   Range(selrng).Select
   Selection.Copy
 End Sub
@@ -141,77 +141,77 @@ End Sub
 %----------------------------------
 Sub ValuesAT()
   Dim r As Integer
-  r = 3 - Selection.Cells(1, 1).Row
-  ActiveSheet.Range("X29") = Selection.Cells(r, 1)
-  ActiveSheet.Range("Y29") = Selection.Cells(r, 3)
-  ActiveSheet.Range("Z29") = Selection.Cells(r, 4) 'VE
-  ActiveSheet.Range("AA29") = Selection.Cells(r, 5) 'VT
-  ActiveSheet.Range("AB29") = Selection.Cells(r, 6) 'VO2
-  ActiveSheet.Range("AC29") = Selection.Cells(r, 7) 'VO2/KG
-  ActiveSheet.Range("AD29") = Selection.Cells(r, 8) 'VE/VO2
-  ActiveSheet.Range("AE29") = Selection.Cells(r, 9) 'VCO2
-  ActiveSheet.Range("AF29") = Selection.Cells(r, 10) 'VE/VCO2
-  ActiveSheet.Range("AG29") = Selection.Cells(r, 11) 'RER
-  ActiveSheet.Range("AH29") = Selection.Cells(r, 12) 'PETO2
-  ActiveSheet.Range("AI29") = Selection.Cells(r, 13) 'PETCO2
-  ActiveSheet.Range("AJ29") = Selection.Cells(r, 14) 'O2PULSE
-  ActiveSheet.Range("AK29") = Selection.Cells(r, 15) 'HR
-  ActiveSheet.Range("AL29") = Selection.Cells(r, 16) 'Bf
+  r=3 - Selection.Cells(1, 1).Row
+  ActiveSheet.Range("X29")=Selection.Cells(r, 1)
+  ActiveSheet.Range("Y29")=Selection.Cells(r, 3)
+  ActiveSheet.Range("Z29")=Selection.Cells(r, 4)'VE
+  ActiveSheet.Range("AA29")=Selection.Cells(r, 5)'VT
+  ActiveSheet.Range("AB29")=Selection.Cells(r, 6)'VO2
+  ActiveSheet.Range("AC29")=Selection.Cells(r, 7)'VO2/KG
+  ActiveSheet.Range("AD29")=Selection.Cells(r, 8)'VE/VO2
+  ActiveSheet.Range("AE29")=Selection.Cells(r, 9)'VCO2
+  ActiveSheet.Range("AF29")=Selection.Cells(r, 10)'VE/VCO2
+  ActiveSheet.Range("AG29")=Selection.Cells(r, 11)'RER
+  ActiveSheet.Range("AH29")=Selection.Cells(r, 12)'PETO2
+  ActiveSheet.Range("AI29")=Selection.Cells(r, 13)'PETCO2
+  ActiveSheet.Range("AJ29")=Selection.Cells(r, 14)'O2PULSE
+  ActiveSheet.Range("AK29")=Selection.Cells(r, 15)'HR
+  ActiveSheet.Range("AL29")=Selection.Cells(r, 16)'Bf
   
-  ActiveSheet.Range("W30") = "AT"
-  ActiveSheet.Range("X30") = WorksheetFunction.Average(Selection.Columns(1)) 'TIME
-  ActiveSheet.Range("Y30") = WorksheetFunction.Average(Selection.Columns(3)) 'LOAD
-  ActiveSheet.Range("Z30") = WorksheetFunction.Average(Selection.Columns(4)) 'VE
-  ActiveSheet.Range("AA30") = WorksheetFunction.Average(Selection.Columns(5)) 'VT
-  ActiveSheet.Range("AB30") = WorksheetFunction.Average(Selection.Columns(6)) 'VO2
-  ActiveSheet.Range("AC30") = WorksheetFunction.Average(Selection.Columns(7)) 'VO2/KG
-  ActiveSheet.Range("AD30") = WorksheetFunction.Average(Selection.Columns(8)) 'VE/VO2
-  ActiveSheet.Range("AE30") = WorksheetFunction.Average(Selection.Columns(9)) 'VCO2
-  ActiveSheet.Range("AF30") = WorksheetFunction.Average(Selection.Columns(10)) 'VE/VCO2
-  ActiveSheet.Range("AG30") = WorksheetFunction.Average(Selection.Columns(11)) 'RER
-  ActiveSheet.Range("AH30") = WorksheetFunction.Average(Selection.Columns(12)) 'PETO2
-  ActiveSheet.Range("AI30") = WorksheetFunction.Average(Selection.Columns(13)) 'PETCO2
-  ActiveSheet.Range("AJ30") = WorksheetFunction.Average(Selection.Columns(14)) 'O2PULSE
-  ActiveSheet.Range("AK30") = WorksheetFunction.Average(Selection.Columns(15)) 'HR
-  ActiveSheet.Range("AL30") = WorksheetFunction.Average(Selection.Columns(16)) 'Bf
+  ActiveSheet.Range("W30")="AT"
+  ActiveSheet.Range("X30")=WorksheetFunction.Average(Selection.Columns(1))'TIME
+  ActiveSheet.Range("Y30")=WorksheetFunction.Average(Selection.Columns(3))'LOAD
+  ActiveSheet.Range("Z30")=WorksheetFunction.Average(Selection.Columns(4))'VE
+  ActiveSheet.Range("AA30")=WorksheetFunction.Average(Selection.Columns(5))'VT
+  ActiveSheet.Range("AB30")=WorksheetFunction.Average(Selection.Columns(6))'VO2
+  ActiveSheet.Range("AC30")=WorksheetFunction.Average(Selection.Columns(7))'VO2/KG
+  ActiveSheet.Range("AD30")=WorksheetFunction.Average(Selection.Columns(8))'VE/VO2
+  ActiveSheet.Range("AE30")=WorksheetFunction.Average(Selection.Columns(9))'VCO2
+  ActiveSheet.Range("AF30")=WorksheetFunction.Average(Selection.Columns(10))'VE/VCO2
+  ActiveSheet.Range("AG30")=WorksheetFunction.Average(Selection.Columns(11))'RER
+  ActiveSheet.Range("AH30")=WorksheetFunction.Average(Selection.Columns(12))'PETO2
+  ActiveSheet.Range("AI30")=WorksheetFunction.Average(Selection.Columns(13))'PETCO2
+  ActiveSheet.Range("AJ30")=WorksheetFunction.Average(Selection.Columns(14))'O2PULSE
+  ActiveSheet.Range("AK30")=WorksheetFunction.Average(Selection.Columns(15))'HR
+  ActiveSheet.Range("AL30")=WorksheetFunction.Average(Selection.Columns(16))'Bf
 End Sub
 
 Sub ValuesPeak()
-  ActiveSheet.Range("W31") = "Peak"
-  ActiveSheet.Range("X31") = WorksheetFunction.Average(Selection.Columns(1)) 'TIME
-  ActiveSheet.Range("Y31") = WorksheetFunction.Max(Selection.Columns(3)) 'LOAD
-  ActiveSheet.Range("Z31") = WorksheetFunction.Max(Selection.Columns(4)) 'VE
-  ActiveSheet.Range("AA31") = WorksheetFunction.Max(Selection.Columns(5)) 'VT
-  ActiveSheet.Range("AB31") = WorksheetFunction.Max(Selection.Columns(6)) 'VO2
-  ActiveSheet.Range("AC31") = WorksheetFunction.Max(Selection.Columns(7)) 'VO2/KG
-  ActiveSheet.Range("AD31") = WorksheetFunction.Max(Selection.Columns(8)) 'VE/VO2
-  ActiveSheet.Range("AE31") = WorksheetFunction.Max(Selection.Columns(9)) 'VCO2
-  ActiveSheet.Range("AF31") = WorksheetFunction.Max(Selection.Columns(10)) 'VE/VCO2
-  ActiveSheet.Range("AG31") = WorksheetFunction.Max(Selection.Columns(11)) 'RER
-  ActiveSheet.Range("AH31") = WorksheetFunction.Max(Selection.Columns(12)) 'PETO2
-  ActiveSheet.Range("AI31") = WorksheetFunction.Max(Selection.Columns(13)) 'PETCO2
-  ActiveSheet.Range("AJ31") = WorksheetFunction.Max(Selection.Columns(14)) 'O2PULSE
-  ActiveSheet.Range("AK31") = WorksheetFunction.Max(Selection.Columns(15)) 'HR
-  ActiveSheet.Range("AL31") = WorksheetFunction.Max(Selection.Columns(16)) 'Bf
+  ActiveSheet.Range("W31")="Peak"
+  ActiveSheet.Range("X31")=WorksheetFunction.Average(Selection.Columns(1))'TIME
+  ActiveSheet.Range("Y31")=WorksheetFunction.Max(Selection.Columns(3))'LOAD
+  ActiveSheet.Range("Z31")=WorksheetFunction.Max(Selection.Columns(4))'VE
+  ActiveSheet.Range("AA31")=WorksheetFunction.Max(Selection.Columns(5))'VT
+  ActiveSheet.Range("AB31")=WorksheetFunction.Max(Selection.Columns(6))'VO2
+  ActiveSheet.Range("AC31")=WorksheetFunction.Max(Selection.Columns(7))'VO2/KG
+  ActiveSheet.Range("AD31")=WorksheetFunction.Max(Selection.Columns(8))'VE/VO2
+  ActiveSheet.Range("AE31")=WorksheetFunction.Max(Selection.Columns(9))'VCO2
+  ActiveSheet.Range("AF31")=WorksheetFunction.Max(Selection.Columns(10))'VE/VCO2
+  ActiveSheet.Range("AG31")=WorksheetFunction.Max(Selection.Columns(11))'RER
+  ActiveSheet.Range("AH31")=WorksheetFunction.Max(Selection.Columns(12))'PETO2
+  ActiveSheet.Range("AI31")=WorksheetFunction.Max(Selection.Columns(13))'PETCO2
+  ActiveSheet.Range("AJ31")=WorksheetFunction.Max(Selection.Columns(14))'O2PULSE
+  ActiveSheet.Range("AK31")=WorksheetFunction.Max(Selection.Columns(15))'HR
+  ActiveSheet.Range("AL31")=WorksheetFunction.Max(Selection.Columns(16))'Bf
 End Sub
 
 Sub ValuesOther()
-  ActiveSheet.Range("W32") = "Other"
-  ActiveSheet.Range("X32") = WorksheetFunction.Average(Selection.Columns(1)) 'TIME
-  ActiveSheet.Range("Y32") = WorksheetFunction.Average(Selection.Columns(3)) 'LOAD
-  ActiveSheet.Range("Z32") = WorksheetFunction.Average(Selection.Columns(4)) 'VE
-  ActiveSheet.Range("AA32") = WorksheetFunction.Average(Selection.Columns(5)) 'VT
-  ActiveSheet.Range("AB32") = WorksheetFunction.Average(Selection.Columns(6)) 'VO2
-  ActiveSheet.Range("AC32") = WorksheetFunction.Average(Selection.Columns(7)) 'VO2/KG
-  ActiveSheet.Range("AD32") = WorksheetFunction.Average(Selection.Columns(8)) 'VE/VO2
-  ActiveSheet.Range("AE32") = WorksheetFunction.Average(Selection.Columns(9)) 'VCO2
-  ActiveSheet.Range("AF32") = WorksheetFunction.Average(Selection.Columns(10)) 'VE/VCO2
-  ActiveSheet.Range("AG32") = WorksheetFunction.Average(Selection.Columns(11)) 'RER
-  ActiveSheet.Range("AH32") = WorksheetFunction.Average(Selection.Columns(12)) 'PETO2
-  ActiveSheet.Range("AI32") = WorksheetFunction.Average(Selection.Columns(13)) 'PETCO2
-  ActiveSheet.Range("AJ32") = WorksheetFunction.Average(Selection.Columns(14)) 'O2PULSE
-  ActiveSheet.Range("AK32") = WorksheetFunction.Average(Selection.Columns(15)) 'HR
-  ActiveSheet.Range("AL32") = WorksheetFunction.Average(Selection.Columns(16)) 'Bf
+  ActiveSheet.Range("W32")="Other"
+  ActiveSheet.Range("X32")=WorksheetFunction.Average(Selection.Columns(1))'TIME
+  ActiveSheet.Range("Y32")=WorksheetFunction.Average(Selection.Columns(3))'LOAD
+  ActiveSheet.Range("Z32")=WorksheetFunction.Average(Selection.Columns(4))'VE
+  ActiveSheet.Range("AA32")=WorksheetFunction.Average(Selection.Columns(5))'VT
+  ActiveSheet.Range("AB32")=WorksheetFunction.Average(Selection.Columns(6))'VO2
+  ActiveSheet.Range("AC32")=WorksheetFunction.Average(Selection.Columns(7))'VO2/KG
+  ActiveSheet.Range("AD32")=WorksheetFunction.Average(Selection.Columns(8))'VE/VO2
+  ActiveSheet.Range("AE32")=WorksheetFunction.Average(Selection.Columns(9))'VCO2
+  ActiveSheet.Range("AF32")=WorksheetFunction.Average(Selection.Columns(10))'VE/VCO2
+  ActiveSheet.Range("AG32")=WorksheetFunction.Average(Selection.Columns(11))'RER
+  ActiveSheet.Range("AH32")=WorksheetFunction.Average(Selection.Columns(12))'PETO2
+  ActiveSheet.Range("AI32")=WorksheetFunction.Average(Selection.Columns(13))'PETCO2
+  ActiveSheet.Range("AJ32")=WorksheetFunction.Average(Selection.Columns(14))'O2PULSE
+  ActiveSheet.Range("AK32")=WorksheetFunction.Average(Selection.Columns(15))'HR
+  ActiveSheet.Range("AL32")=WorksheetFunction.Average(Selection.Columns(16))'Bf
 End Sub
 
 Sub AutomatePeakOtherValues()
@@ -224,26 +224,26 @@ Sub AutomatePeakOtherValues()
       'Fill other values
       Dim rng As Range
       Dim fdrng As Range
-      Set rng = ws.Range("C:C")
-      Set fdrng = rng.Find(30, LookIn:=xlValues)
+      Set rng=ws.Range("C:C")
+      Set fdrng=rng.Find(30, LookIn:=xlValues)
       If Not fdrng Is Nothing Then
-        topRow = fdrng(0, 1).Row
-        bottomRow = fdrng(2, 0).Row
-        Set rng = ws.Range(topRow & ":" & bottomRow)
+        topRow=fdrng(0, 1).Row
+        bottomRow=fdrng(2, 0).Row
+        Set rng=ws.Range(topRow & ":" & bottomRow)
         rng.Select
         Call ValuesOther
       End If
     
       'Fill peak values
       Dim maxVO2
-      maxVO2 = WorksheetFunction.Max(ws.Range("G:G"))
-      Set rng = ws.Range("G:G")
-      Set fdrng = rng.Find(maxVO2)
+      maxVO2=WorksheetFunction.Max(ws.Range("G:G"))
+      Set rng=ws.Range("G:G")
+      Set fdrng=rng.Find(maxVO2)
         If Not fdrng Is Nothing Then
-          topRow = fdrng(-1, 1).Row
-          bottomRow = fdrng(3, 0).Row
-        If ws.Range("W31").Value = "" Then
-          Set rng = ws.Range(topRow & ":" & bottomRow)
+          topRow=fdrng(-1, 1).Row
+          bottomRow=fdrng(3, 0).Row
+        If ws.Range("W31").Value="" Then
+          Set rng=ws.Range(topRow & ":" & bottomRow)
           rng.Select
           Call ValuesPeak
         End If
@@ -269,24 +269,24 @@ Sub VECharts()
   For Each ws In Worksheets
     With ws.ChartObjects.Add _
       (Left:=800, Top:=725, Width:=400, Height:=225)
-      .chart.ChartType = xlLine
+      .chart.ChartType=xlLine
       .chart.SetSourceData Source:=ws.Range("A:A,H:H,J:J") _
       , PlotBy:=xlColumns
       
-      .chart.HasAxis(xlCategory, xlPrimary) = True
-      .chart.HasAxis(xlValue, xlPrimary) = True
+      .chart.HasAxis(xlCategory, xlPrimary)=True
+      .chart.HasAxis(xlValue, xlPrimary)=True
       
-      .chart.Axes(xlCategory, xlPrimary).CategoryType = xlAutomatic
+      .chart.Axes(xlCategory, xlPrimary).CategoryType=xlAutomatic
     End With
   Next ws
 End Sub
 
 Sub CopyCPETParametersFromSheetsToMain()
   Dim x As Integer
-  For x = 3 To 99
+  For x=3 To 99
     Dim sheetname As String
     Sheets("aaa_main").Activate
-    sheetname = ActiveSheet.Cells(x, 1)
+    sheetname=ActiveSheet.Cells(x, 1)
     ActiveSheet.Cells(x, 32).Select
     Sheets(sheetname).Select
     Range("X30:AL30").Select
@@ -313,10 +313,10 @@ End Sub
 
 Sub CopyVEVO2VEVCO2FromSheetsToMain()
   Dim x As Integer
-  For x = 3 To 99
+  For x=3 To 99
     Dim sheetname As String
     Sheets("aaa_main").Activate
-    sheetname = ActiveSheet.Cells(x, 1)
+    sheetname=ActiveSheet.Cells(x, 1)
     ActiveSheet.Cells(x, 79).Select
     Sheets(sheetname).Select
     Range("Y22").Select
@@ -340,23 +340,23 @@ Sub FindStartEndTimeofExercise()
   Dim starttime As String
   Dim endtime As String
   Dim sheetname As String
-  For x = 3 To 99
+  For x=3 To 99
     Sheets("aaa_main").Activate
-    sheetname = ActiveSheet.Cells(x, 1)
+    sheetname=ActiveSheet.Cells(x, 1)
     Sheets(sheetname).Select
-    y = 15
-    While ActiveSheet.Cells(y, 3) = "-"
-      y = y + 1
+    y=15
+    While ActiveSheet.Cells(y, 3)="-"
+      y=y + 1
     Wend
-    starttime = ActiveSheet.Cells(y, 1)
-    y = y + 5
+    starttime=ActiveSheet.Cells(y, 1)
+    y=y + 5
     While ActiveSheet.Cells(y, 3) > "0"
-      y = y + 1
+      y=y + 1
     Wend
-    endtime = ActiveSheet.Cells(y - 1, 1)
+    endtime=ActiveSheet.Cells(y - 1, 1)
     Sheets("aaa_main").Activate
-    ActiveSheet.Cells(x, 77) = starttime
-    ActiveSheet.Cells(x, 78) = endtime
+    ActiveSheet.Cells(x, 77)=starttime
+    ActiveSheet.Cells(x, 78)=endtime
   Next x
 End Sub
 

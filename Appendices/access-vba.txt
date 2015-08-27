@@ -1,0 +1,698 @@
+﻿'#########################################################
+'Dynamic Data Exchange with RealLink application
+'#########################################################
+Option Compare Database
+Function RLChannel() As Long
+--Dim AppName As String
+--Dim Topic As String
+--AppName = "******"
+--Topic = "******"
+--DDETerminateAll
+--
+--On Error GoTo ErrorHandler
+--RLChannel = DDEInitiate(AppName, Topic)
+--Exit Function
+--ErrorHandler:
+--MsgBox "Error initiating connection to RealLink - Error ID: " & _
+--Err.Description, vbOKOnly, "Error"
+End Function
+Sub RLSendData(strdata As String, WaitSecs As Integer)
+--On Error GoTo ErrorHandler
+--Dim starttime As Double
+--AppActivate "RealLink - NGTBIO", Wait
+--starttime = Timer
+--SendKeys strdata, True
+--starttime = Timer
+--While Timer < starttime + WaitSecs: Wend
+--Exit Sub
+--ErrorHandler:
+'Error gets dealt with by procedure calling this function
+End Sub
+--
+Function RLGetData(ChannelNum As Long) As String
+--On Error GoTo ErrorHandler
+--Dim RLItem As String
+--RLItem = "Table 0,0,80,24,Comma"
+--RLGetData = DDERequest(ChannelNum, RLItem)
+--Exit Function
+--ErrorHandler:
+--MsgBox "Error capturing data from RealLink - : " & Err.Description, vbOKOnly, "Error"
+End Function
+--
+Sub WaitFor(intSeconds As Integer)
+--Dim starttime As Single
+--starttime = Timer
+--While Timer < starttime + intSeconds: Wend
+End Sub
+Function ChkLabScreen(strLabScreen As String, strSurname As String, strLab As String) As Integer
+--If InStr(1, strLabScreen, strSurname) = 0 Then ChkLabScreen = ChkLabScreen + 1
+--If InStr(1, strLabScreen, strLab) Then ChkLabScreen = ChkLabScreen + 2
+End Function
+Sub RunRealLink()
+'Wait for application to start then wait 5 seconds
+'Shell runs commands asynchronously
+'DDEPoke does not work - use windows shell and processID instead
+--Dim dReturnValue As Single
+--dReturnValue = Shell("C:\RFW\RFW.EXE /LC:\RFW\RFWDDE.DLL NGTBIO", vbMaximizedFocus)
+--While dReturnValue < 0: Wend
+--Call WaitFor(5)
+End Sub
+Sub Login(LabNum As String, Username As String, Password As String)
+' Login to Biochem/Haem
+--Dim strSend As String
+--
+--strSend = "***" & vbCr
+--Call RLSendData(strSend, 2)
+--
+--strSend = LabNum & vbCr
+--Call RLSendData(strSend, 2)
+--
+--strSend = Username & vbCr
+--Call RLSendData(strSend, 1)
+--
+--strSend = Password & vbCr
+--Call RLSendData(strSend, 1)
+End Sub
+Sub SearchPatient(Surname As String, HospitalNumber As String, Optional EarliestDate As Date, Optional LatestDate As Date)
+'Enter patient information and date range(optional)
+--Dim strSend As String
+--strSend = ""
+--Call RLSendData(strSend, 1)
+--strSend = HospitalNumber & vbCr
+--Call RLSendData(strSend, 1)
+--
+--strSend = Left(Surname, 2) & vbCr
+--Call RLSendData(strSend, 1)
+--strSend = Format(EarliestDate, "dd.mm.yy") & vbCr
+--Call RLSendData(strSend, 0) 'Earliest date to search
+--
+--strSend = Format(LatestDate, "dd.mm.yy") & vbCr
+--Call RLSendData(strSend, 0) 'Latest date to search
+End Sub
+
+'#########################################################  
+'Parser for results scraped from RealLink screengrab
+'#########################################################
+Option Compare Database
+'Results parsers
+Public Sub ParseFBC(strHD As String)
+On Error GoTo ErrorHandler
+Dim strA() As String 'string to hold rows of data
+Dim intRows As Long
+Dim intTests As Integer
+Dim intPosition As Integer
+Dim strTest() As Variant 'name of test eg WBC
+Dim strResult(10, 1) As String 
+'change first dimension if changing number of tests
+strTest = Array("WBC", "Hb", "Hct", "MCV", "Plts", _
+"NEUT", "LYMPH", "MONO", "EOS", "BASO")
+intTests = UBound(strTest)
+strA = Split(strHD, vbCr)
+intRows = UBound(strA)
+Dim tempRow As String
+Dim rowdate As Integer
+For rowdate = 0 To 10
+--tempRow = strA(rowdate)
+--If InStr(1, tempRow, "Collected") > 0 Then
+---Dim strDateTime() As String
+---Dim strDate As String
+---Dim strTime As String
+---strDateTime = Split(tempRow, "Collected")
+---strDateTime = Split(strDateTime(1), ",")
+---If InStr(1, strDateTime(1), "*") > 0 Then
+---strDate = Trim(Replace(strDateTime(1), ".", "/"))
+---End If
+---If UBound(strDateTime) > 2 Then
+---strDate = Trim(Replace(strDateTime(1), ".", "/"))
+---strTime = Trim(strDateTime(2))
+---End If
+--End If
+Next rowdate
+For t = 0 To intTests 'cycle through list of tests - strTest
+--For i = 0 To intRows 'cycle through rows - strA
+---tempRow = strA(i)
+---tempRow = Replace(tempRow, vbCrLf, "")
+---tempRow = Replace(tempRow, vbLf, "")
+---tempRow = Replace(tempRow, vbCr, "")
+---temptest = strTest(t)
+---intPosition = InStr(tempRow, temptest)
+---If intPosition > 0 Then
+----Dim strTemp() As String
+----strTemp = Split(tempRow, ",")
+----
+----For j = 0 To UBound(strTemp) 'cycle through values in a single row - strTemp
+-----If Trim(strTemp(j)) = strTest(t) Then
+------strResult(t, 0) = strTest(t)
+------
+------If Trim(strTemp(j + 1)) = "+" Or Trim(strTemp(j + 1)) = "-" Then
+-------strResult(t, 1) = Trim(strTemp(j + 2))
+------Else
+-------strResult(t, 1) = Trim(strTemp(j + 1))
+------End If
+-----End If
+----Next j
+---End If
+--Next i
+Next t
+'Fill in results into form
+--Call SaveHaem(strDate, strTime, strResult)
+--Exit Sub
+--ErrorHandler:
+End Sub
+Sub ParseCoag(strCoag As String)
+--On Error GoTo ErrorHandler
+--Dim strA() As String 'string to hold rows of data
+--Dim intRows As Long
+--Dim intTests As Integer
+--Dim intPosition As Integer
+--Dim strTest() As Variant 'name of test eg WBC
+--Dim strResult(23, 1) As String 'change first dimension if changing number of tests
+--strTest = Array("PT", "PT C Ratio", "APTT", "APTT Ratio", "TCT", "TCT Ratio")
+--intTests = UBound(strTest)
+--strA = Split(strCoag, vbCr)
+--intRows = UBound(strA)
+--Dim tempRow As String
+--Dim rowdate As Integer
+--For rowdate = 0 To 10
+---tempRow = strA(rowdate)
+---If InStr(1, tempRow, "Collected") > 0 Then
+----Dim strDateTime() As String
+----Dim strDate As String
+----Dim strTime As String
+----strDateTime = Split(tempRow, "Collected")
+----strDateTime = Split(strDateTime(1), ",")
+----If InStr(1, strDateTime(1), "*") > 0 Then
+----strDate = Trim(Replace(strDateTime(1), ".", "/"))
+----End If
+----If UBound(strDateTime) > 2 Then
+----strDate = Trim(Replace(strDateTime(1), ".", "/"))
+----strTime = Trim(strDateTime(2))
+----End If
+---End If
+--Next rowdate
+--For t = 0 To intTests 'cycle through list of tests - strTest
+---For i = 0 To intRows 'cycle through rows - strA
+---tempRow = strA(i)
+---tempRow = Replace(tempRow, ",+", "")
+---tempRow = Replace(tempRow, ",-", "")
+---tempRow = Replace(tempRow, "+,", ",")
+---tempRow = Replace(tempRow, "-,", ",")
+---tempRow = Replace(tempRow, "¦", ",")
+---temptest = strTest(t)
+---intPosition = InStr(tempRow, temptest)
+---If intPosition > 0 Then
+----Dim strTemp() As String
+----strTemp = Split(tempRow, ",")
+----For j = 0 To UBound(strTemp) 'cycle through values in a single row - strTemp
+-----If Trim(strTemp(j)) = strTest(t) Then
+------strResult(t, 0) = strTest(t)
+------
+------If Trim(strTemp(j + 1)) = "+" Or Trim(strTemp(j + 1)) = "-" Or Trim(strTemp(j + 1)) = "" Then
+-------strResult(t, 1) = Trim(strTemp(j + 2))
+------Else
+-------strResult(t, 1) = Trim(strTemp(j + 1))
+------End If
+-----End If
+----Next j
+---End If
+----Next i
+--Next t
+'Fill in results into form
+--Call SaveCoag(strDate, strTime, strResult)
+--Exit Sub
+--ErrorHandler:
+End Sub
+Sub ParseBio(strBD As String)
+--Dim strSurname As String
+--Dim strHNum As String
+--Dim strA() As String 'string to hold rows of data
+--Dim intRows As Long
+--Dim intTests As Integer
+--Dim intPosition As Integer
+--Dim strTest() As Variant 'name of test eg Sodium
+--strTest = Array("Sodium", "Potassium", "Urea", "Creat", "eGFR", "Phos", "Mg++", "Chloride", _
+--"Bili", "G-GT", "A Phos", "ALT", "AST", "T Prot", "Alb", "Globulin", "Glucose", _
+--"CRP", "Trop I", "Calcium", "Ad Cal", "Amylase")
+--Dim strResult(21, 1) As String 'change first dimension if changing number of tests
+--intTests = UBound(strTest)
+--strBD = Replace(strBD, ".Amylase.", "..")
+--strBD = Replace(strBD, vbCrLf, "")
+--strBD = Replace(strBD, vbLf, "")
+--strBD = Replace(strBD, vbCr, "")
+--strA = Split(strBD, "¦")
+--Dim strTempDate As String
+--strTempDate = strA(0)
+--If InStr(strTempDate, "Collected") Then
+---Dim strDateTime() As String
+---Dim strDate As String
+---Dim strTime As String
+---strDateTime = Split(strTempDate, "Collected")
+---strDateTime = Split(strDateTime(1), ",")
+---strDate = strDateTime(1)
+---strDate = Replace(strDate, ".", "/")
+---strTime = strDateTime(2)
+--End If
+--intRows = UBound(strA)
+--For t = 0 To intTests 'cycle through list of tests - strTest
+---For i = 0 To intRows 'cycle through rows - strA
+---tempRow = strA(i)
+---temptest = strTest(t)
+---intPosition = InStr(tempRow, temptest)
+----If intPosition > 0 Then
+-----Dim strTemp() As String
+-----Dim intDots As Integer
+-----
+----'Routine to remove dots-word-dots
+-----intDots = InStr(strA(i), "..")
+-----If intDots > 0 Then
+------strTemp = Split(NoDots(strA(i)), ",")
+-----Else
+------strTemp = Split(strA(i), ",")
+-----End If
+----'End of Routine to remove dots-word-dots
+-----
+-----For j = 0 To UBound(strTemp) 'cycle through values in a single row - strTemp
+------If Trim(strTemp(j)) = strTest(t) Then
+-------strResult(t, 0) = strTest(t)
+-------
+-------If Trim(strTemp(j + 1)) = "+" Or Trim(strTemp(j + 1)) = "-" Then
+--------strResult(t, 1) = Trim(strTemp(j + 2))
+-------Else
+--------strResult(t, 1) = Trim(strTemp(j + 1))
+-------End If
+------End If
+-----Next j
+----End If
+---Next i
+--Next t
+--'Fill in results into form
+---Call SaveBio(strDate, strTime, strResult)
+End Sub
+Function NoDots(strWithDots As String) As String
+--Dim intDotEndPos As Integer
+--Dim intDotStartPos As Integer
+--Dim intRowLen As Integer
+--intDotEndPos = InStrRev(strWithDots, "..") 'find the first occurrence of .. from the end
+--intDotStartPos = InStr(strWithDots, "..") 'find the first occurrence of .. from the end
+--intRowLen = Len(strWithDots) 'get the total length of the string with dots
+'get the substring on the right and left of the dots based on above values
+--NoDots = Left(strWithDots, intDotStartPos) & "," & Right(strWithDots, intRowLen - intDotEndPos - 1)
+'Debug.Print NoDots
+End Function
+
+'#########################################################
+'Code to save results to respective tables
+'#########################################################
+Option Compare Database
+Sub SaveBio(strDate, strTime, strResult)
+Dim tf_B As SubForm
+Set tf_B = Forms!frm_Demo!frm_Bloods
+'create a new record
+tf_B.SetFocus
+DoCmd.GoToRecord , , acNewRec
+tf_B!CHI = Forms!frm_Demo!CHI
+tf_B!Surname = Forms!frm_Demo!Surname
+tf_B!Date = strDate
+tf_B!Time = strTime
+intTests = UBound(strResult, 1)
+For i = 0 To intTests
+--Select Case strResult(i, 0)
+--Case "Potassium"
+---tf_B!K = strResult(i, 1)
+--Case "Urea"
+---tf_B!Urea = strResult(i, 1)
+--Case "Creat"
+---tf_B!Creatine = strResult(i, 1)
+'Case "eGFR"
+--Case "Phos"
+---tf_B!PO4 = strResult(i, 1)
+--Case "Mg++"
+---tf_B!Magnesium = strResult(i, 1)
+--Case "Chloride"
+---tf_B!Cl = strResult(i, 1)
+--Case "Bili"
+---tf_B!Bilirubin = strResult(i, 1)
+--Case "G-GT"
+---tf_B!GGT = strResult(i, 1)
+--Case "A Phos"
+---tf_B!Al_Phos = strResult(i, 1)
+--Case "ALT"
+---tf_B!ALT = strResult(i, 1)
+--Case "AST"
+---tf_B!AST = strResult(i, 1)
+--Case "T Prot"
+---tf_B!Protein = strResult(i, 1)
+--Case "Alb"
+---tf_B!Albumin = strResult(i, 1)
+--Case "Globulin"
+---tf_B!Globulin = strResult(i, 1)
+--Case "Glucose"
+---tf_B!Glucose = strResult(i, 1)
+--Case "CRP"
+---tf_B!CRP = strResult(i, 1)
+--Case "Trop I"
+---tf_B!Troponin = strResult(i, 1)
+--Case "Calcium"
+---tf_B!Ca = strResult(i, 1)
+--Case "Ad Cal"
+---tf_B!Adj_Ca = strResult(i, 1)
+--Case "Amylase"
+---tf_B!Amylase = strResult(i, 1)
+--Case "Sodium"
+---tf_B!Na = strResult(i, 1)
+--End Select
+--Next i
+End Sub
+Sub SaveCoag(TestDate As String, TestTime As String, Results() As String)
+Dim tf_C As SubForm
+Set tf_C = Forms!frm_Demo!frm_Coag
+'create a new record
+tf_C.SetFocus
+DoCmd.GoToRecord , , acNewRec
+tf_C!CHI = Forms!frm_Demo!CHI
+tf_C!Surname = Forms!frm_Demo!Surname
+tf_C!Date = TestDate
+If TestTime <> "*" And TestTime <> "NK" Then tf_C!Time = TestTime
+intTests = UBound(Results, 1)
+For i = 0 To intTests
+--Select Case Results(i, 0)
+--Case "PT"
+---tf_C!PT = Results(i, 1)
+--Case "PT C Ratio"
+---tf_C![PT C Ratio] = Results(i, 1)
+--Case "APTT"
+---tf_C!APTT = Results(i, 1)
+--Case "APTT Ratio"
+---tf_C![APTT Ratio] = Results(i, 1)
+--Case "TCT"
+---tf_C!TCT = Results(i, 1)
+--Case "TCT Ratio"
+---tf_C![TCT Ratio] = Results(i, 1)
+--End Select
+--Next i
+End Sub
+Sub SaveHaem(TestDate As String, TestTime As String, Results() As String)
+Dim tf_H As SubForm
+Set tf_H = Forms!frm_Demo!frm_Haematology
+'create a new record
+tf_H.SetFocus
+DoCmd.GoToRecord , , acNewRec
+tf_H!CHI = Forms!frm_Demo!CHI
+tf_H!Surname = Forms!frm_Demo!Surname
+tf_H!Date = TestDate
+If TestTime <> "*" Then tf_H!Time = TestTime
+intTests = UBound(Results, 1)
+For i = 0 To intTests
+'frmHaem.strResult(i, 0) = strResult(i, 1)
+--Select Case Results(i, 0)
+--Case "WBC"
+---tf_H!WBC = Results(i, 1)
+--Case "Plts"
+---tf_H!Plts = Results(i, 1)
+--Case "Hb"
+---tf_H!HB = Results(i, 1)
+--Case "MCV"
+---tf_H!MCV = Results(i, 1)
+--Case "MCHC"
+---tf_H!MCHC = Results(i, 1)
+--Case "RDW"
+---tf_H!RDW = Results(i, 1)
+--Case "RBC"
+---tf_H!RBC = Results(i, 1)
+--Case "NEUT"
+---tf_H!NEUT = Results(i, 1)
+--Case "LYMPH"
+---tf_H!LYMPH = Results(i, 1)
+--Case "MONO"
+---tf_H!MONO = Results(i, 1)
+--Case "EOS"
+---tf_H!EOS = Results(i, 1)
+--Case "BASO"
+---tf_H!BASO = Results(i, 1)
+--Case "Hct"
+---tf_H!Hct = Results(i, 1)
+--Case "MCH"
+---tf_H!MCH = Results(i, 1)
+--Case "MPV"
+---tf_H!MPV = Results(i, 1)
+--Case "PDW"
+---tf_H!PDW = Results(i, 1)
+--Case "PCT"
+---tf_H!PCT = Results(i, 1)
+--End Select
+--Next i
+End Sub
+
+'#########################################################
+'User interface functions
+'#########################################################
+
+Option Compare Database
+Private Sub Form_Load()
+--Me.RecordSource = "tb_Demo"
+End Sub
+Private Sub cmbAllPatients_AfterUpdate()
+--' Find the record that matches the control.
+--Dim rs As Object
+--Set rs = Me.Recordset.Clone
+--rs.FindFirst "[IPID] = " & Str(Nz(Me![cmbAllPatients], 0))
+--If Not rs.EOF Then Me.Bookmark = rs.Bookmark
+End Sub
+Private Sub cmbChooseProcedure_AfterUpdate()
+--'Filter by operation name
+--Dim strSQL As String
+--Dim strFilter As String
+--If Me.cmbChooseProcedure = "All" Or IsNull(Me.cmbChooseProcedure) Then
+---' If the combo is Null, use the whole table as the RecordSource.
+---Me.RecordSource = "tb_Demo"
+--Else
+---strFilter = Me.cmbChooseProcedure
+---strSQL = "SELECT tb_Demo.* FROM tb_Demo LEFT JOIN tb_Operation ON tb_Demo.IPID = tb_Operation.IPID WHERE ((([tb_Operation]![Primary Procedure]) LIKE '*" & strFilter & "*'))ORDER BY [tb_Operation]![Operation Date];"
+---Me.RecordSource = strSQL
+--End If
+End Sub
+Private Sub cmbChooseOpDate_AfterUpdate()
+--'Filter by operation DATE
+--Dim strSQL As String
+--Dim strFilter As Date
+--If IsNull(Me.cmbChooseOpDate) Then
+---' If the combo is Null, use the whole table as the RecordSource.
+---Me.RecordSource = "tb_Demo"
+--Else
+---strFilter = CDate(Me.cmbChooseOpDate)
+---strSQL = "SELECT tb_Demo.* FROM tb_Demo LEFT JOIN tb_Operation ON tb_Demo.IPID = tb_Operation.IPID WHERE ((([tb_Operation]![Operation Date]) > #" & strFilter & "#))ORDER BY [tb_Operation]![Operation Date];"
+---Me.RecordSource = strSQL
+--End If
+End Sub
+Private Sub cmbChooseSpecialty_AfterUpdate()
+--'Filter by Specialty
+--Dim strSQL As String
+--Dim strFilter As String
+--strFilter = Me.cmbChooseSpecialty
+--If strFilter = "All" Or IsNull(Me.cmbChooseSpecialty) Then
+---' If the combo is Null, use the whole table as the RecordSource.
+---Me.RecordSource = "tb_Demo"
+--Else
+---strSQL = "SELECT tb_Demo.* FROM tb_Demo LEFT JOIN tb_Event_Admission ON tb_Demo.IPID = tb_Event_Admission.IPID WHERE ((([tb_Event_Admission]![Specialty] LIKE '*" & strFilter & "*')));"
+---Me.RecordSource = strSQL
+--End If
+End Sub
+Private Sub cmdNewPatient_Click()
+--On Error GoTo Err_cmdNewPatient_Click
+--DoCmd.DoMenuItem acFormBar, acRecordsMenu, 5, , acMenuVer70
+--DoCmd.GoToRecord , , acNewRec
+--Exit Sub
+--Err_cmdNewPatient_Click:
+--MsgBox Err.Description
+End Sub
+Private Sub listCurrentPatients_AfterUpdate()
+--' Find the record that matches the control.
+--Dim rs As Object
+--Set rs = Me.Recordset.Clone
+--rs.FindFirst "[IPID] = " & Str(Nz(Me![listCurrentPatients], 0))
+--If Not rs.EOF Then Me.Bookmark = rs.Bookmark
+--Me.frm_Physiology.Form.Refresh
+End Sub
+Private Sub cmdSendDetails_Click()
+--'checked and works
+--Dim Surname As String 'Surname from frm_demo
+--Dim HospitalNum As String 'Hospital number from frm_demo
+--Dim OpDate As Date 'Date of operation from frm_operation
+--Dim Edate As Date 'Earliest date of bloods to return
+--Dim Ldate As Date 'Latest date of bloods to return
+--On Error GoTo ErrorHandler:
+--Surname = Me.Surname
+--HospitalNum = Me.HospitalNum
+--OpDate = Me.frm_Operation.Form![Operation Date]
+--'Set search date range
+--Edate = OpDate - 10
+--Ldate = OpDate + 5
+--If Me.chkResuse = 0 Then 'Is Reuse box not checked then start a new RL session
+---Call RunRealLink
+---Select Case Me.frameChooseLab.Value
+----Case 1
+-----Call Login("3", "******", "******")
+----Case 2
+-----Call Login("2", "******", "******")
+---End Select
+--End If
+--Call SearchPatient(Surname, HospitalNum, Edate, Ldate)
+--Exit Sub
+--ErrorHandler:
+MsgBox "cmdHaem Error" & Err.Description
+End Sub
+Private Sub cmdImport_Click()
+--On Error GoTo ErrorHandler
+--Dim intRepeat As Integer
+--KillSwitch = False
+--If CInt(Me.txtAutoRepeat) > 0 Then
+---intRepeat = CInt(Me.txtAutoRepeat)
+--Else
+---intRepeat = 1
+--End If
+--If Me.chkAutoUpdate.Value = -1 Then
+---For i = 1 To intRepeat
+----Call ImportData
+----Me.Refresh
+----Call cmdLater_Click
+----If KillSwitch = True Then Exit Sub
+---Next
+--End If
+--ErrorHandler:
+--Exit Sub
+End Sub
+Private Sub ImportData()
+--Dim LabChannel As Long
+--LabChannel = RLChannel
+--'Grab screen text from existing RL window
+--Dim strResultScreen As String
+--Call WaitFor(3)
+--If LabChannel > 0 Then
+---strResultScreen = RLGetData(LabChannel)
+--Else
+---MsgBox "RealLink connection could not be established", vbOKOnly, "Connection Error"
+---Exit Sub
+--End If
+--'Send to either FBC/Coag parser
+--If InStr(1, strResultScreen, "Press Esc") Then KillSwitch = True
+--If InStr(1, strResultScreen, "..FBC..") Then
+---Call ParseFBC(strResultScreen)
+--End If
+--If InStr(1, strResultScreen, "..C/Screen..") Then
+---Call ParseCoag(strResultScreen)
+--End If
+--If InStr(1, strResultScreen, "Biochem") Then
+---Call ParseBio(strResultScreen)
+--End If
+--'Terminate all DDE connections
+DDETerminate LabChannel
+End Sub
+Private Sub cmdEarlier_Click()
+--Dim strTemp As String
+--strTemp = "E" & vbCr
+--Call RLSendData(strTemp, 0)
+End Sub
+Private Sub cmdLater_Click()
+--Dim strTemp As String
+--strTemp = "L" & vbCr
+--Call RLSendData(strTemp, 0)
+End Sub
+Private Sub tb_ABG_ALL_subform_Enter()
+--Me.Refresh
+End Sub
+Private Sub tgDemoDupes_Click()
+--Select Case Me.tgDemoDupes.Value
+---Case -1
+----Me.tgDemoDupes.SetFocus
+----Me.tgDemoDupes.Caption = "DemoDupes ON"
+----Me.RecordSource = "qs_DemoDupes"
+---Case 0
+----Me.tgDemoDupes.SetFocus
+----Me.tgDemoDupes.Caption = "DemoDupes OFF"
+----Me.RecordSource = "tb_Demo"
+--End Select
+End Sub
+Private Sub cmdRefresh_Click()
+--On Error GoTo Err_cmdRefresh_Click
+--DoCmd.DoMenuItem acFormBar, acRecordsMenu, 5, , acMenuVer70
+--Exit_cmdRefresh_Click:
+--Exit Sub
+--Err_cmdRefresh_Click:
+--MsgBox Err.Description
+--Resume Exit_cmdRefresh_Click
+End Sub
+
+
+'#########################################################
+'VBA code to import CPET results into database
+'#########################################################
+Option Compare Database
+Private Sub cmdImport_Click()
+--Dim strEmptyline As String
+--On Error Resume Next
+--Dim strResult As String
+--Dim strResult2 As String
+--Dim strTemp() As String
+--Dim channel As Long
+--channel = TermChannel
+--strResult = TermGetData(channel)
+--If strResult = "" Then Exit Sub
+--strResult = Replace(strResult, "qq", "")
+--'strTemp = Split(strResult, "COMMENT SCREEN")
+--' strResult = strTemp(1)
+--'strResult = strTemp(0)
+--strTemp = Split(strResult, vbCrLf)
+--For j = 0 To UBound(strTemp)
+--If Trim(strTemp(j)) <> "" Then
+---Me.txtFull.SetFocus
+---Me.txtFull.Value = Me.txtFull.Value & Trim(strTemp(j)) & vbCrLf
+--'Debug.Print Trim(strTemp(j))
+--End If
+--Next j
+--Me.Application.DDEPoke channel, "qvt_term_item", "1"
+--WaitFor (1)
+--DDETerminateAll
+End Sub
+Function TermGetData(ChannelNum As Long) As String
+--On Error GoTo ErrorHandler
+--Dim RLItem As String
+--RLItem = "Table 0,0,80,24,Comma"
+--TermGetData = DDERequest(ChannelNum, RLItem)
+--Exit Function
+--ErrorHandler:
+--MsgBox "Error capturing data from RealLink - : " & Err.Description, vbOKOnly, "Error"
+End Function
+Function TermChannel() As Long
+--Dim AppName As String
+--Dim Topic As String
+--AppName = "qvt_term"
+--Topic = "Respiratory"
+--DDETerminateAll
+--On Error GoTo ErrorHandler
+--TermChannel = DDEInitiate(AppName, Topic)
+--Exit Function
+--ErrorHandler:
+--MsgBox "Error initiating connection to Term - Error ID: " & _
+--Err.Description, vbOKOnly, "Error"
+End Function
+Sub TermSendData(strdata As String, WaitSecs As Integer)
+--On Error GoTo ErrorHandler
+--Dim starttime As Double
+--AppActivate "RealLink - NGTBIO", Wait
+--SendKeys strdata, True
+--starttime = Timer
+--While Timer < starttime + WaitSecs: Wend
+--Exit Sub
+--ErrorHandler:
+'Error gets dealt with by procedure calling this function
+End Sub
+Private Sub cmdSendPatient_Click()
+--Dim channel As Long
+--Dim strName As String
+'
+--strName = "ret" & vbCr & "7" & Me.Parent!Surname & " " & Me.Parent!Forename & vbCr
+--
+--channel = TermChannel
+--Me.Application.DDEPoke channel, "qvt_term_item", strName
+--DDETerminateAll
+End Sub
