@@ -15,7 +15,7 @@
 %	PACKAGES AND THEMES
 %----------------------------------------------------------------------------------------
 
-\documentclass{beamer}
+\documentclass[10pt]{beamer}
 
 \mode<presentation> {
 
@@ -369,10 +369,9 @@ University of Glasgow \\ % Your institution for the title page
 	\end{itemize}
 \end{frame}
 
-\section{Results}
 
 %--CHAPTER 2----CHAPTER 2----CHAPTER 2----CHAPTER 2----CHAPTER 2----CHAPTER 2----CHAPTER 2--
-\subsection{CPET vs Outcomes}
+\section{Chapter 2}
 \begin{frame}
 	\frametitle{CPET and Postoperative Outcomes}
 	\framesubtitle{Chapter 2 Page 56; (n=100)}
@@ -437,7 +436,7 @@ University of Glasgow \\ % Your institution for the title page
 
 
 %--CHAPTER 3----CHAPTER 3----CHAPTER 3----CHAPTER 3----CHAPTER 3----CHAPTER 3----CHAPTER 3--
-\subsection{CPET vs Preop factors}
+\section{Chapter 3}
 
 \begin{frame}
 	\frametitle{Chapter 3}
@@ -531,7 +530,7 @@ University of Glasgow \\ % Your institution for the title page
 
 
 %--CHAPTER 4----CHAPTER 4----CHAPTER 4----CHAPTER 4----CHAPTER 4----CHAPTER 4----CHAPTER 4--
-\subsection{Chapter 4}
+\section{Chapter 4}
 
 \begin{frame}
 	\frametitle{Chapter 4}
@@ -558,7 +557,8 @@ University of Glasgow \\ % Your institution for the title page
 \begin{frame}
 	\frametitle{Corrected $\dot{V}_{O_2}$ vs. Absolute $\dot{V}_{O_2}$}
 	\framesubtitle{Could this be a source of spurious correlation?}
-\[Corrected\ \dot{V}_{O_2} (ml/kg/min) = \frac{Absolute\ \dot{V}_{O_2}\ (litres/min) * 1000}{Total\ body\ weight\ (kg)}\]
+	\[Corrected\ \dot{V}_{O_2} (ml/kg/min) = \frac{Absolute\ \dot{V}_{O_2}\ (litres/min) * 1000}{Total\ body\ weight\ (kg)}\]
+
 \end{frame}
 
 \begin{frame}
@@ -601,57 +601,73 @@ University of Glasgow \\ % Your institution for the title page
 
 
 
-\subsection{Systemic inflammation}
+\section{Chapter 5}
 
 \begin{frame}
-	\frametitle{Preop Pathophysiology and Postoperative Systemic Inflammation}
-	\begin{block}{title}
-		Preoperative inflammatory status of the patient and obstructive jaundice play an important role in modulating postoperative systemic inflammation which may not simply be due to the effect of surgery and its sequelae.
+	\frametitle{Chapter 5}
+	\begin{block}{Title}
+		An investigation into the relationship between preoperative clinico-pathological characteristics and post-operative systemic inflammatory response in patients undergoing pancreaticoduodenectomy.
 	\end{block}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Background}
+	\framesubtitle{Section 5.1 Page 124}
+	\begin{itemize}
+		\item Perioperative systemic inflammation influences short and long-term outcomes
+		\item Elevated preoperative systemic inflammation is associated with postoperative complications in colorectal surgery, after oesophagectomy, liver resections and cardiac surgery. 
+		\item Early exaggerated postoperative systemic inflammatory response is also associated with increased infective complications
+		\item In patients undergoing pancreatic surgery, preoperative inflammatory state is further influenced by:
+		\begin{itemize}
+			\item Obstructive jaundice
+			\item Cholangitis
+			\item ERCP and stenting
+			\item Post-ERCP / EUS related complications
+		\end{itemize}
+		\item Obesity is associated with chronic inflammation
+		\item Impact of aerobic capacity on postoperative inflammation not studied before
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Preop inflammation vs. Postop CRP}
+	\framesubtitle{Figure 5.3 Page 142}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{../Figures/sirs_crp_crp_alb}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Obstructive jaundice vs. Postop CRP}
+	\framesubtitle{ }
+	\begin{figure}
+		\includegraphics[width=0.7\textwidth]{../Figures/sirs_bil_crp}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{CPET, Body composition vs. Postop Inflammation }
+	\framesubtitle{Section 5.3.4, 5.3.5 Pages 132-133 }
+	\begin{itemize}
+		\item No relationship between $\dot{V}_{O_2}$ and post op. CRP or neutrophil count
+		\item Serum albumin levels lower in patients with low VO2
+		\begin{itemize}
+			\item Probably related to preop hypoalbuminemia
+			\item This in turn related to low skeletal muscle and multiple other factors
+		\end{itemize}
+		\item No relationship between body composition and postoperative CRP/neutrophil counts
+	\end{itemize}
+\end{frame}
+
+
+\section{Chapter 6}
 \begin{frame}
 	\frametitle{Postoperative Systemic Inflammation and Outcomes}
 \end{frame}
 
 
-
-
-\begin{frame}
-\frametitle{Multiple Columns}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Table}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-\end{frame}
-
-%------------------------------------------------
 
 
 
@@ -672,37 +688,6 @@ $E = mc^2$
 \end{example}
 \end{frame}
 
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
-
-This statement requires citation \cite{p1}.
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
-\end{frame}
 
 %------------------------------------------------
 
