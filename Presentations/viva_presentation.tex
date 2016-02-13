@@ -557,7 +557,20 @@ University of Glasgow \\ % Your institution for the title page
 \begin{frame}
 	\frametitle{Corrected $\dot{V}_{O_2}$ vs. Absolute $\dot{V}_{O_2}$}
 	\framesubtitle{Could this be a source of spurious correlation?}
+	
 	\[Corrected\ \dot{V}_{O_2} (ml/kg/min) = \frac{Absolute\ \dot{V}_{O_2}\ (litres/min) * 1000}{Total\ body\ weight\ (kg)}\]
+
+	\vfill
+	
+	For example, if the absolute $\dot{V}_{O_2}$AT was 0.84 litres/min, the corrected $\dot{V}_{O_2}$AT (ml/kg/min) would vary with patient weight as follows:
+	
+	\begin{table}
+	\begin{tabular}{c c c c c c}
+		     Weight       & kg        & 70 & 80   & 90  & 100 \\
+		$\dot{V}_{O_2}$AT & ml/kg/min & 12 & 10.5 & 9.3 & 8.4
+	\end{tabular}
+	\end{table}
+
 
 \end{frame}
 
@@ -649,14 +662,16 @@ University of Glasgow \\ % Your institution for the title page
 
 \begin{frame}
 	\frametitle{CPET, Body composition vs. Postop Inflammation }
-	\framesubtitle{Section 5.3.4, 5.3.5 Pages 132-133 }
+	\framesubtitle{Section 5.3.4, 5.3.5 Pages 132-133, Tables 5.8-5.10 Pages 145-147 }
 	\begin{itemize}
 		\item No relationship between $\dot{V}_{O_2}$ and post op. CRP or neutrophil count
+		\vfill
 		\item Serum albumin levels lower in patients with low VO2
 		\begin{itemize}
 			\item Probably related to preop hypoalbuminemia
 			\item This in turn related to low skeletal muscle and multiple other factors
 		\end{itemize}
+		\vfill
 		\item No relationship between body composition and postoperative CRP/neutrophil counts
 	\end{itemize}
 \end{frame}
@@ -664,7 +679,65 @@ University of Glasgow \\ % Your institution for the title page
 
 \section{Chapter 6}
 \begin{frame}
-	\frametitle{Postoperative Systemic Inflammation and Outcomes}
+	\frametitle{Chapter 6}
+	\framesubtitle{Postoperative CRP and complications}
+	\begin{block}{Title}
+		An investigation into the relationship between postoperative systemic inflammation and complications after pancreaticoduodenectomy.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Does post op. CRP predict severity of POPF?}
+	\framesubtitle{No, it does not. \\ Moreover, diagnosis of POPF is made on the third day using drain amylase. }
+	
+	\begin{columns}
+		\column[c]{0.45\textwidth}
+			\begin{figure}
+				\includegraphics[width=\textwidth]{../Figures/crp_comp_crp_popf_yes_no}
+			\end{figure}
+		
+		\column[c]{0.45\textwidth}
+			\begin{figure}
+				\includegraphics[width=\textwidth]{../Figures/crp_comp_crp_popf_isgps}
+			\end{figure}
+	\end{columns}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Does post op. CRP predict infective complications?}
+	\framesubtitle{Yes, it does. \\ But, only in the absence of a pancreatic fistula. }
+	
+	\begin{columns}
+		\column[c]{0.45\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{../Figures/crp_comp_infective_leak0}
+			\\ Patients with NO POPF
+		\end{figure}
+		
+		\column[c]{0.45\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{../Figures/crp_comp_infective_leak1}
+			\\ Patients with POPF
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Receiver operating characteristics analysis}
+	\framesubtitle{CRP thresholds for predicting infective complications in the absence of a POPF. }
+	\begin{columns}
+		\column[c]{0.45\textwidth}
+			\begin{figure}
+				\includegraphics[width=\textwidth]{../Figures/crp_comp_ROC_infection_D3}
+				\\{\scriptsize D3 178 mg/dl; AUC 0.64; NPV 0.79; \\Spec 0.66; Sens 0.64; p=0.011}
+			\end{figure}
+		\column[c]{0.45\textwidth}
+			\begin{figure}
+				\includegraphics[width=\textwidth]{../Figures/crp_comp_ROC_infection_D4}
+				\\{\scriptsize D4 125 mg/dl; AUC 0.71; NPV 0.83; \\Spec 0.64; Sens 0.74; p$<$0.001}
+			\end{figure}
+	\end{columns}
 \end{frame}
 
 
