@@ -274,16 +274,6 @@ University of Glasgow \\ % Your institution for the title page
 \end{frame}
 
 \begin{frame}
-	\frametitle{Parameters measured during CPET }
-	\framesubtitle{ Section 1.6 Page 25}
-	\begin{itemize}
-		\item
-		\item
-		\item
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
 	\frametitle{Role of CPET in preoperative assessment}
 	\begin{itemize}
 		\item General Surgery
@@ -306,20 +296,6 @@ University of Glasgow \\ % Your institution for the title page
 		\item To examine the value of serial daily postoperative markers of systemic inflammatory response in the prediction of post-operative complications.
 	\end{enumerate}
 \end{frame}
-
-\begin{frame}
-	\frametitle{Patients and Methods}
-	\begin{itemize}
-		\item Patients undergoing pancreaticoduodenectomy at Glasgow Royal Infirmary
-		\item August 2008 - August 2012
-		\item Prospectively maintained MS Access database
-		\item Preoperative data - Bloods, co-morbidity including POSSUM Physiology Score, stent information
-		\item Cardiopulmonary exercise testing
-		\item Prospective recording of complications using ISGPS or Clavie-Dindo classification
-		\item Serial measurements of biochemical parameters during first postoperative week
-	\end{itemize}
-\end{frame}
-
 
 
 
@@ -396,29 +372,33 @@ University of Glasgow \\ % Your institution for the title page
 \section[Chapter 3]{CPET, Jaundice and Preoperative Pathophysiology}
 
 \begin{frame}
-	\frametitle{CPET, Jaundice and Preoperative Pathophysiology}
-	\framesubtitle{What were the preoperative patient factors that were associated with a low $\dot{V}_{O_2}$?}
-	Factors associated with $\dot{V}_{O_2}$AT $<$ 10 ml/kg/min
-	\begin{table}
-		\begin{tabular}{l l l l}
-			& HR   & 95\% CI    & p     \\ \hline
-			Female sex & 3.75 & 1.57-8.95  & 0.003 \\
-			BMI$>$25   & 3.65 & 1.61-8.26  & 0.002 \\
-			Cancer     & 4.02 & 1.33-12.16 & 0.014 \\
-			CRP$>$10   & 2.98 & 1.29-6.86  & 0.010
-		\end{tabular}
-	\end{table}
+	\frametitle{Jaundice and other patient characteristics}
+	\framesubtitle{What was the relationship between obstructive jaundice and other parameters?}
 	
-	Factors associated with $\dot{V}_{O_2}$Peak $<$ 16ml/kg/min
-	\begin{table}
-		\begin{tabular}{l l l l}
-			& HR   & 95\% CI   & p        \\ \hline
-			Female sex  & 7.57 & 3.09-18.5 & $<$0.001 \\
-			BMI$>$25    & 2.57 & 1.18-5.63 & 0.018    \\
-			Haemoglobin & 2.43 & 1.05-5.63 & 0.038
-		\end{tabular}
-	\end{table}
+	\begin{columns}
+		\column[c]{0.5\textwidth}		
+		
+		\begin{figure}
+			\includegraphics[width=\textwidth]{jaundice_distribution}
+		\end{figure}
+		
+		\begin{figure}
+			\includegraphics[width=\textwidth]{jaundice_vs_patient_factors}
+		\end{figure}
+		
+		\column[c]{0.5\textwidth}		
+		{\scriptsize			
+			Severity of systemic inflammation proportionate to severity of jaundice. \\
+			\medskip
+			Obstructive jaundice associated with electrolyte abnormalities.\\
+			\medskip
+			Jaundiced patients were more likely to be anaemic, with lower haematocrit and lower mean corpuscular volume.\\
+			\medskip
+			No significant difference in the preoperative renal function, prothrombin time and white cell count between jaundiced and non-jaundiced patients.\\
+		}
+	\end{columns}
 \end{frame}
+
 
 \begin{frame}
 	\frametitle{What was the effect of jaundice on $\dot{V}_{O_2}$?}
@@ -438,38 +418,32 @@ University of Glasgow \\ % Your institution for the title page
 	\end{columns}
 \end{frame}
 
+
 \begin{frame}
-	\frametitle{Jaundice and other patient characteristics}
-	\framesubtitle{What was the relationship between obstructive jaundice and other parameters?}
-			
-	\begin{columns}
-	\column[c]{0.5\textwidth}		
-
-	\begin{figure}
-		\includegraphics[width=\textwidth]{jaundice_distribution}
-	\end{figure}
-	
-	\begin{figure}
-		\includegraphics[width=\textwidth]{jaundice_vs_patient_factors}
-	\end{figure}
-
-	\column[c]{0.5\textwidth}		
-	{\scriptsize			
-	Severity of systemic inflammation proportionate to severity of jaundice. \\
+	\frametitle{What preop factors were associated with low $\dot{V}_{O_2}$?}
+	\framesubtitle{Multivariate binary logistic regression analysis}
+	Factors associated with $\dot{V}_{O_2}$AT $<$ 10 ml/kg/min
+	\begin{table}
+		\begin{tabular}{l| l l l}
+			& HR   & 95\% CI    & p     \\ \hline
+			Female sex & 3.75 & 1.57-8.95  & 0.003 \\
+			BMI$>$25   & 3.65 & 1.61-8.26  & 0.002 \\
+			Cancer     & 4.02 & 1.33-12.16 & 0.014 \\
+			CRP$>$10   & 2.98 & 1.29-6.86  & 0.010
+		\end{tabular}
+	\end{table}
+	\hrule
 	\medskip
-	
-	Obstructive jaundice associated with electrolyte abnormalities.\\
-	\medskip
-	
-	Jaundiced patients were more likely to be anaemic, with lower haematocrit and lower mean corpuscular volume.\\
-	\medskip
-	
-	No significant difference in the preoperative renal function, prothrombin time and white cell count between jaundiced and non-jaundiced patients.\\
-	}
-	
-	\end{columns}
+	Factors associated with $\dot{V}_{O_2}$Peak $<$ 16ml/kg/min
+	\begin{table}
+		\begin{tabular}{l| l l l}
+			& HR   & 95\% CI   & p        \\ \hline
+			Female sex  & 7.57 & 3.09-18.5 & $<$0.001 \\
+			BMI$>$25    & 2.57 & 1.18-5.63 & 0.018    \\
+			Haemoglobin & 2.43 & 1.05-5.63 & 0.038
+		\end{tabular}
+	\end{table}
 \end{frame}
-
 
 
 
@@ -477,23 +451,15 @@ University of Glasgow \\ % Your institution for the title page
 \section[Chapter 4]{CPET and Body Composition}
 
 \begin{frame}
-	\frametitle{Chapter 4}
-	\framesubtitle{CPET and Body Composition - Page 97-122 }
-	\begin{block}{Title}
-		An investigation into the relationship between cardiopulmonary exercise testing and body composition in patients undergoing pancreaticoduodenectomy.
-	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{What causes a low $\dot{V}_{O_2}$? }
-	\framesubtitle{Section 4.1.2 Page 98-99 }
+	\frametitle{ CPET and Body Composition}
+	\framesubtitle{What causes a low $\dot{V}_{O_2}$? }
 	\begin{itemize}
 		\item Low $\dot{V}_{O_2}$ has been universally ascribed to low aerobic fitness due to inadequate cardio-pulmonary reserve
 		\item Occassionally anaemia, peripheral vascular disease or even mitochondrial diseases may play a role
 		\item $\dot{V}_{O_2}$AT and $\dot{V}_{O_2}$Peak are most commonly used parameters
-		\item Both are normalised by dividing using patient's total body weight
-		\item But, during exercise $\dot{V}_{O_2}$ is a function of skeletal muscle mass
-		\item This can result in 'spurious correlation' unfairly penalising obese subjects
+		\item During exercise $\dot{V}_{O_2}$ is a function of skeletal muscle mass
+		\item But, both are normalised by against patient's total body weight
+		\item 'Spurious correlation' unfairly penalises obese subjects
 		\item Most patients in this cohort did not have overt cardiac/respiratory disease that could explain the low $\dot{V}_{O_2}$.
 	\end{itemize}
 \end{frame}
@@ -519,11 +485,11 @@ University of Glasgow \\ % Your institution for the title page
 \end{frame}
 
 \begin{frame}
-	\frametitle{Body composition estimation}
-	\framesubtitle{Figure 4.1 Page 103}
+	\frametitle{Body composition differences between the sexes}
+	\framesubtitle{Significant differences in skeletal muscle area across all BMIs.}
 	\begin{figure}
 		\centering
-		\includegraphics[width=\linewidth]{bc_gimp}
+		\includegraphics[height=0.95\textheight]{../Figures/bc_gender_bmi_pie}
 		\label{fig:bc_gimp}
 	\end{figure}
 \end{frame}
@@ -561,15 +527,8 @@ University of Glasgow \\ % Your institution for the title page
 \section[Chapter 5]{Factors affecting post op inflammation}
 
 \begin{frame}
-	\frametitle{Chapter 5}
-	\begin{block}{Title}
-		An investigation into the relationship between preoperative clinico-pathological characteristics and post-operative systemic inflammatory response in patients undergoing pancreaticoduodenectomy.
-	\end{block}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Background}
-	\framesubtitle{Section 5.1 Page 124}
+	\frametitle{Impact of perioperative systemic inflammation?}
+	\framesubtitle{Inflammation before and after surgery affects short and long term outcomes}
 	\begin{itemize}
 		\item Perioperative systemic inflammation influences short and long-term outcomes
 		\item Elevated preoperative systemic inflammation is associated with postoperative complications in colorectal surgery, after oesophagectomy, liver resections and cardiac surgery. 
@@ -589,7 +548,7 @@ University of Glasgow \\ % Your institution for the title page
 
 \begin{frame}
 	\frametitle{Preop inflammation vs. Postop CRP}
-	\framesubtitle{Figure 5.3 Page 142}
+	\framesubtitle{Post op CRP trends are influenced by both preop CRP and preop albumin.}
 	\begin{figure}
 		\includegraphics[width=\textwidth]{../Figures/sirs_crp_crp_alb}
 	\end{figure}
@@ -597,7 +556,7 @@ University of Glasgow \\ % Your institution for the title page
 
 \begin{frame}
 	\frametitle{Obstructive jaundice vs. Postop CRP}
-	\framesubtitle{ }
+	\framesubtitle{Obstructive jaundice is associated with an attenuated inflammatory response.}
 	\begin{figure}
 		\includegraphics[width=0.7\textwidth]{../Figures/sirs_bil_crp}
 	\end{figure}
@@ -622,13 +581,6 @@ University of Glasgow \\ % Your institution for the title page
 
 
 \section[Chapter 6]{Postoperative CRP and complications}
-\begin{frame}
-	\frametitle{Chapter 6}
-	\framesubtitle{Postoperative CRP and complications}
-	\begin{block}{Title}
-		An investigation into the relationship between postoperative systemic inflammation and complications after pancreaticoduodenectomy.
-	\end{block}
-\end{frame}
 
 \begin{frame}
 	\frametitle{Does post op. CRP predict severity of POPF?}
@@ -698,63 +650,63 @@ University of Glasgow \\ % Your institution for the title page
 % How would this patient have been managed 10 years ago?
 \section{Case study}
 \begin{frame}
-	\frametitle{A typical patient}
+	\frametitle{A case study}
+	\framesubtitle{How does this work influence decision-making?}
 	\begin{itemize}
 		\item 63 yr old female with BMI of 35 presents with painless OJ
 		\item PMH - HTN, T2DM, smoked 10/day for 40 yrs
 		\item Bloods: Bil 180, CRP 22, Alb 30
 		\item Imaging: Resectable tumour of head of pancreas
-		\item How would this patient have been managed 10 years ago?
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{10 years ago...}
-	\begin{itemize}
-		\item Non-dynamic measures of fitness - ECG, PFTs, ASA, ECHO
-		\item Routine biliary drainage
-		\item No objective methods to predict complications other than pancreatic leak
-		\item Impact of postoperative SIRS on complications - no clinical utility
-		\item Limited ability to identifying patients at risk of complications
-		\item ERAS principles not universally applied
-		\item No prehabilitation
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Now... }
-	\begin{itemize}
-		\item CPET in all or selected cases (evidence from other patient groups)
-		\item Routine biliary drainage no longer indicated
-		\item Enhanced recovery more widespread
 		\medskip
-		\hrule
-		\medskip
-		\item Reluctance to perform CPET in jaundiced patients
-		\item No recognised thresholds for CPET parameters
-		\item No clear thresholds for post-op inflammatory markers in predicting complications
-		\item Poor understanding of impact of obesity on preop function and postop outcomes
-		\item No prehabilitation
+		\item Should this patient undergo CPET?
+		\item Should this patient undergo biliary drainage?
+		\item Should we wait until resolution of jaundice before CPET?
+		\item How can the CPET results be used to influence her care?
+		\item How can the postoperative inflammatory markers be used to manage her care?
 	\end{itemize}
 \end{frame}
 
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
-\begin{verbatim}
 \begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-\end{example}
+	\frametitle{A case study}
+	\begin{description}
+	{\scriptsize 	
+		\item [Ch 2] CPET may allow identifying if she is at increased risk of complications, prolonged hospital stay and non-receipt of adjuvant therapy. 
+					\\ CPET should not be used on its own to decline surgery. 
+					\hrule
+		\item [Ch 3] CPET can be performed in the presence of jaundice. 
+					\\ Jaundice does not adversely affect dynamic cardiopulmonary response to and this cannot be a justification for biliary drainage. 
+					\\ Taken together with evidence from trials on preperative biliary drainage, she should proceed direct to surgery.
+						\hrule
+		\item [Ch 4] Interpret low $\dot{V}_{O_2}$ in her case with caution. 
+					\\ Her aerobic capacity may be better than that suggested by her test results. 
+					\\ Beware of \textit{spurious correlation} with total body weight.
+						\hrule
+		\item [Ch 5] Jaundice and hypo-albuminemia attenuate post-op inflammatory response.
+					\\ However, this does not translate into increased complications. 
+					\\ Aerobic capacity does not affect post-op inflammatory response.
+						\hrule
+		\item [Ch 6] If her drain amylase on D3 is normal and D3 CRP$<$178 or D4 CRP$<$125, she is likely to have an uneventful postoperative course and must continue on 'enhanced-recovery' pathway.
+				\\ If she develops a POPF, the early inflammatory response does not predict outcome.
+	}
+	\end{description}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Future directions}
+	\begin{itemize}
+		\item Assessing impact of prehabilitation
+		\item Assessing impact of neo-adjuvant treatments
+		\item Does CPET predict long-term survival?
+		\item Improvements in aerobic capacity and body composition through nutritional supplementation and physical exercise
+		\item Correction of anaemia through preoperative iron supplementation
+		\item Early recognition and aggressive management of complications
+		\item Assessing suitability for 'fast-track' to surgery and 'enhanced-recovery'
+	\end{itemize}
+	
+
 \end{frame}
 
 
-%------------------------------------------------
 
 \begin{frame}
 \Huge{\centerline{The End}}
