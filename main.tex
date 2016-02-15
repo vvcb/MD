@@ -66,7 +66,7 @@
 \usepackage{amsmath} %For aligning all equations on the equal to sign
 \usepackage{pdfpages} %for including pdf files or individual pages of pdf files
 \usepackage{textcomp}
-%\usepackage{easy-todo} %Adds todos to the document. Use [disable] as package option in final verion. Also see \listoftodos below.
+\usepackage{easy-todo} %Adds todos to the document. Use [disable] as package option in final verion. Also see \listoftodos below.
 %\usepackage[pagewise]{lineno} %To help Donny review. Remove for final version
 %\linenumbers
 
@@ -318,6 +318,11 @@ West of Scotland Pancreatic Unit, Glasgow Royal Infirmary
 \pagestyle{fancy} % Return the page headers back to the "fancy" style
 
 % Include the chapters of the thesis as separate files from the Chapters folder
+\todo{Abbreviations list}
+\todo{All tables must have legends, units}
+\todo{All values and ranges need defining?}
+\todo{Chapter 5-6 - Reduce to more understandable key issues. Several irrelevant tables should be removed.}
+
 \input{Chapters/Introduction} 		%1
 \input{Chapters/CPET_Outcomes} 	%2
 \input{Chapters/CPET_Jaundice} 	%3
@@ -356,6 +361,6 @@ West of Scotland Pancreatic Unit, Glasgow Royal Infirmary
 \printbibliography
 
 %\clearpage
-%\listoftodos
+\listoftodos
 
 \end{document}  
