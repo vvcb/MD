@@ -5,34 +5,38 @@
 	\centering
 	\begin{tabular}{|l l c| c c c| c c c|}
 		\hline
-		Variable                &           & n (\%) & HR   & 95\% CI   & \textit{p} & HR   & 95\% CI   & \textit{p} \\ \hline
-		Age                     & $\leq$ 65 & 70     &      &           &            &      &           &  \\
-		                        & $>$ 65    & 68     & 1.50 & 0.77-2.94 & 0.237      &      &           &  \\
-		Sex                     & Male      & 95     &      &           &            &      &           &  \\
-		                        & Female    & 43     & 7.44 & 3.18-17.4 & $<$0.001   & 7.57 & 3.09-18.5 & $<$0.001   \\
-		Body Mass Index         & $\leq$ 25 & 69     &      &           &            &      &           &  \\
-		                        & $>$ 25    & 69     & 2.02 & 1.03-3.99 & 0.042      & 2.57 & 1.18-5.63 & 0.018      \\
-		Smoking                 & No        & 88     &      &           &            &      &           &  \\
-		                        & Yes       & 50     & 1.90 & 0.94-3.85 & 0.073      &      &           &  \\
-		Cardiovascular disease  & No        & 78     &      &           &            &      &           &  \\
-		                        & Yes       & 58     & 1.68 & 0.85-3.33 & 0.139      &      &           &  \\
-		Respiratory disease     & No        & 124    &      &           &            &      &           &  \\
-		                        & Yes       & 12     & 2.35 & 0.67-8.21 & 0.181      &      &           &  \\
-		Malignancy              & No        & 32     &      &           &            &      &           &  \\
-		                        & Yes       & 106    & 2.06 & 0.90-4.69 & 0.085      &      &           &  \\
-		POSSUM Physiology Score & $\leq$ 14 & 72     &      &           &            &      &           &  \\
-		                        & $>$ 14    & 61     & 1.76 & 0.89-3.51 & 0.107      &      &           &  \\
-		Preop Biliary Drainage  & No        & 56     &      &           &            &      &           &  \\
-		                        & Yes       & 49     & 0.91 & 0.42-1.97 & 0.814      &      &           &  \\
-		Bilirubin ($\mu$mol/L)  & $\leq$ 17 & 65     &      &           &            &      &           &  \\
-		                        & 18-35     & 22     & 2.31 & 0.86-6.19 & 0.096      &      &           &  \\
-		                        & 36-250    & 32     & 1.60 & 0.68-3.76 & 0.281      &      &           &  \\
-		                        & $>$ 250   & 19     & 2.74 & 0.95-7.90 & 0.062      &      &           &  \\
-		Haemoglobin (g/dL)      & $\geq$ 12 & 95     &      &           &            &      &           &  \\
-		                        & $<$ 12    & 43     & 2.80 & 1.32-5.93 & 0.007      & 2.43 & 1.05-5.63 & 0.038      \\
-		CRP (mg/dL)             & $\leq$ 10 & 90     &      &           &            &      &           &  \\
-		                        & $>$ 10    & 46     & 1.42 & 0.69-2.90 & 0.333      &      &           &  \\
-		Albumin                 & $\geq$ 35 & 65     &      &           &            &      &           &  \\
-		                        & $<$ 35    & 73     & 1.28 & 0.65-2.49 & 0.476      &      &           &  \\ \hline
+		Variable                   &           & n   & HR   & 95\% CI   & \textit{p} & HR   & 95\% CI   & \textit{p} \\ \hline
+		Age (years)                & $\leq$ 65 & 70  &      &           &            &      &           &  \\
+		                           & $>$ 65    & 68  & 1.50 & 0.77-2.94 & 0.237      &      &           &  \\
+		Sex                        & Male      & 95  &      &           &            &      &           &  \\
+		                           & Female    & 43  & 7.44 & 3.18-17.4 & $<$0.001   & 7.57 & 3.09-18.5 & $<$0.001   \\
+		Body Mass Index ($kg/m^2$) & $\leq$ 25 & 69  &      &           &            &      &           &  \\
+		                           & $>$ 25    & 69  & 2.02 & 1.03-3.99 & 0.042      & 2.57 & 1.18-5.63 & 0.018      \\
+		Smoking                    & No        & 88  &      &           &            &      &           &  \\
+		                           & Yes       & 50  & 1.90 & 0.94-3.85 & 0.073      &      &           &  \\
+		Cardiovascular disease     & No        & 78  &      &           &            &      &           &  \\
+		                           & Yes       & 58  & 1.68 & 0.85-3.33 & 0.139      &      &           &  \\
+		Respiratory disease        & No        & 124 &      &           &            &      &           &  \\
+		                           & Yes       & 12  & 2.35 & 0.67-8.21 & 0.181      &      &           &  \\
+		Cancer                     & No        & 32  &      &           &            &      &           &  \\
+		                           & Yes       & 106 & 2.06 & 0.90-4.69 & 0.085      &      &           &  \\
+		POSSUM Physiology Score    & $\leq$ 14 & 72  &      &           &            &      &           &  \\
+		                           & $>$ 14    & 61  & 1.76 & 0.89-3.51 & 0.107      &      &           &  \\
+		Preop Biliary Drainage     & No        & 56  &      &           &            &      &           &  \\
+		                           & Yes       & 49  & 0.91 & 0.42-1.97 & 0.814      &      &           &  \\
+		Bilirubin ($\mu$mol/l)     & $\leq$ 17 & 65  &      &           &            &      &           &  \\
+		                           & 18-35     & 22  & 2.31 & 0.86-6.19 & 0.096      &      &           &  \\
+		                           & 36-250    & 32  & 1.60 & 0.68-3.76 & 0.281      &      &           &  \\
+		                           & $>$ 250   & 19  & 2.74 & 0.95-7.90 & 0.062      &      &           &  \\
+		Haemoglobin (g/dl)         & $\geq$ 12 & 95  &      &           &            &      &           &  \\
+		                           & $<$ 12    & 43  & 2.80 & 1.32-5.93 & 0.007      & 2.43 & 1.05-5.63 & 0.038      \\
+		C-reactive protein (mg/l)  & $\leq$ 10 & 90  &      &           &            &      &           &  \\
+		                           & $>$ 10    & 46  & 1.42 & 0.69-2.90 & 0.333      &      &           &  \\
+		Albumin (g/l)              & $\geq$ 35 & 65  &      &           &            &      &           &  \\
+		                           & $<$ 35    & 73  & 1.28 & 0.65-2.49 & 0.476      &      &           &  \\ \hline
 	\end{tabular}
+	\medskip
+	\begin{flushleft}
+		Oxygen consumption at peak exercise ($\dot{V}_{O_2}$Peak) $<$ 16 ml/kg/min was independently associated with female sex, body mass index $>$ 25 $kg/m^2$, presence of cancer and raised preoperative C-reactive protein (CRP) level ($>$ 10 mg/l).
+	\end{flushleft}
 \end{sidewaystable}
