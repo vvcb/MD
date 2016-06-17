@@ -21,7 +21,7 @@ Chapter 1 reviews the existing literature on preoperative cardiopulmonary exerci
 ## Chapter 2
 
 Chapter 2 reports on the role of cardiopulmonary exercise testing in predicting postoperative complications after pancreaticoduodenectomy. 
-The results demonstrate that patients with $\dot{V}_{O_2}$AT less than 10 ml/kg/min are more likely to develop a postoperative pancreatic fistula, stay longer in hospital and less likely to receive adjuvant therapy. 
+The results demonstrate that patients with VO2AT less than 10 ml/kg/min are more likely to develop a postoperative pancreatic fistula, stay longer in hospital and less likely to receive adjuvant therapy. 
 These results emphasise the importance of aerobic fitness to recover from the operative stress of major surgery without significant morbidity. 
 Cardiopulmonary exercise testing may prove useful in selecting patients for intensive prehabilitation programmes as well as for other optimisation measures to prepare them for major surgery.
 
@@ -30,13 +30,13 @@ Cardiopulmonary exercise testing may prove useful in selecting patients for inte
 Chapter 3evaluates the relationship between cardiopulmonary exercise physiology and other clinicopathological characteristics of the patient. 
 A detailed analysis of cardiopulmonary exercise test parameters in jaundiced versus non-jaundiced patients demonstrates that obstructive jaundice does not impair cardiopulmonary exercise physiology. 
 This further supports emerging evidence in contemporary literature that jaundiced patients can proceed directly to surgery without preoperative biliary drainage. 
-The results of this study also show an interesting inverse relationship between body mass index and anaerobic threshold which is analysed in more detail in Chapter \ref{ch_bodycomp}. 
+The results of this study also show an interesting inverse relationship between body mass index and anaerobic threshold which is analysed in more detail in Chapter 4. 
 
 ## Chapter 4 
 
 Chapter 4 examines the relationship between preoperative cardiopulmonary exercise physiology and body composition in depth. 
 All parameters measured at cardiopulmonary exercise test are compared against body composition and body mass index. 
-The results of this chapter report that the current method of reporting $\dot{V}_{O_2}$, both at peak exercise and anaerobic threshold, is biased against obese subjects and advises caution in the interpretation of cardiopulmonary exercise test results in patients with a high BMI. 
+The results of this chapter report that the current method of reporting VO2, both at peak exercise and anaerobic threshold, is biased against obese subjects and advises caution in the interpretation of cardiopulmonary exercise test results in patients with a high BMI. 
 This is particularly important as current evidence in literature suggests that postoperative outcomes in obese subjects are comparable to non-obese subjects while cardiopulmonary exercise test results are also abnormally low in this very same cohort of patients.
 
 ## Chapter 5
