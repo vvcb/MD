@@ -66,7 +66,7 @@
 \usepackage{amsmath} %For aligning all equations on the equal to sign
 \usepackage{pdfpages} %for including pdf files or individual pages of pdf files
 \usepackage{textcomp}
-%\usepackage{easy-todo} %Adds todos to the document. Use [disable] as package option in final verion. Also see \listoftodos below.
+\usepackage{easy-todo} %Adds todos to the document. Use [disable] as package option in final verion. Also see \listoftodos below.
 %\usepackage[pagewise]{lineno} %To help Donny review. Remove for final version
 %\linenumbers
 
@@ -176,7 +176,7 @@
 
 \pagestyle{empty} % Page style needs to be empty for this page
 
-\dedicatory{Dedicated to A, I, A} % Dedication text
+\dedicatory{Dedicated to LGCPVAIA.} % Dedication text
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
@@ -277,8 +277,11 @@ University Department of Surgery, Glasgow Royal Infirmary
 Professor Paul Horgan,\\
 University Department of Surgery, Glasgow Royal Infirmary
 
-Mr. Euan J Dickson,\\
-West of Scotland Pancreatic Unit, Glasgow Royal Infirmary
+%Nurses and Allied Health Professionals,\\
+%Surgical High Dependency Unit, Glasgow Royal Infirmary
+
+%Mr. Euan J Dickson,\\
+%West of Scotland Pancreatic Unit, Glasgow Royal Infirmary
 }
 
 \clearpage % Start a new page
@@ -307,7 +310,7 @@ West of Scotland Pancreatic Unit, Glasgow Royal Infirmary
 %	ABBREVIATIONS
 %----------------------------------------------------------------------------------------
 
-%\input{Chapters/Abbreviations}
+\input{Chapters/Abbreviations}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
@@ -318,6 +321,12 @@ West of Scotland Pancreatic Unit, Glasgow Royal Infirmary
 \pagestyle{fancy} % Return the page headers back to the "fancy" style
 
 % Include the chapters of the thesis as separate files from the Chapters folder
+%\todo{Abbreviations list-done}
+%\todo{All tables must have legends, units-nearly}
+%\todo{All values and ranges need defining?}
+%\todo{Chapter 5-6 - Reduce to more understandable key issues. Several irrelevant tables should be removed.}
+
+%\input{response_letter} %To allow bibliography in response
 \input{Chapters/Introduction} 		%1
 \input{Chapters/CPET_Outcomes} 	%2
 \input{Chapters/CPET_Jaundice} 	%3

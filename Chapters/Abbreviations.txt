@@ -1,0 +1,52 @@
+\item [APACHE] Physiological and Operative Severity Score for the enUmeration of Mortality and Morbidity
+\item [AT] Anaerobic Threshold
+\item [AUC] Area Under Curve (in ROC analysis)
+\item [BMI] Body Mass Index
+\item [BP] Blood Pressure
+\item [CARS] Compensatory anti-inflammatory response syndrome
+\item [CECT] Contrast Enhanced Computerised Tomography
+\item [CI] Confidence Interval
+\item [COPD/COAD] Chronic Obstructive Pulmonary/Airway Disease
+\item [CPET] Cardiopulmonary exercise testing
+\item [CRP] C-reactive protein
+\item [CT] Computerised Tomography
+\item [DGE] Delayed Gastric Emptying
+\item [ECG] Electrocardiogram
+\item [ERCP] Endoscopic retrograde cholangio-pancreatography
+\item [ESPAC] European study group for pancreatic cancer
+\item [EUS] Endoscopic ultrasound
+\item [FEV] Forced Expired Volume
+\item [FVC] Forced Vital Capacity
+\item [GIMP] GNU Image Manipulation Program
+\item [GPS] Modified Glasgow Prognostic Score
+\item [HDU] High Dependency Unit
+\item [HR] Heart Rate
+\item [HRR] Heart Rate Reserve
+\item[Hb] Haemoglobin
+\item [ICU] Intensive care unit
+\item [IPMN] Intraductal mucinous neoplasm of pancreas
+\item [IQR] Inter-quartile range
+\item [ISGPF] International study group for pancreatic fistula
+\item [ISGPS] International study group for pancreatic surgery
+\item [JVP] Jugular venous pulse
+\item [LBM] Lean body mass
+\item [MRI] Magnetic Resonance Imaging
+\item [NET] Neuro-endocrine tumour
+\item [NLR] Neutrophil-lymphocyte ratio
+\item [PBD] Preoperative Biliary Drainage
+\item [PET] Positron-emission tomography
+\item [POD] Postoperative Day
+\item [POPF] Post-Operative Pancreatic Fistula
+\item [POPF] Post-operative pancreatic fistula
+\item [POSSUM] Physiological and Operative Severity Score for the enUmeration of Mortality and Morbidity
+\item [PPH] Post Pancreatectomy Haemorrhage
+\item [PPH] Post-pancreatectomy haemorrhage
+\item [PPS] POSSUM Physiology Score
+\item [RCRI] Revised Cardiac Risk Index
+\item [RER] Respiratory Exchange Ratio
+\item [ROC] Receiver Operating Characteristics
+\item [SIMD] Scottish Index of Multiple Deprivation
+\item [SIRS] Sytemic Inflammatory Response Syndrome
+\item [US] Ultrasound
+\item [WCC] White Cell Count
+\item [WHO] World Health Organisation

@@ -41,7 +41,7 @@ Further details regarding operative technique and postoperative care are provide
 
 \subsection{Biochemical parameters}
 
-Patients had routine measurements of inflammatory markers including C-reactive protein (CRP) and differential white cell counts from the day before surgery and every day for at least a week after surgery. 
+Patients had routine measurements of inflammatory markers including C-reactive protein (CRP) from the day before surgery and every day for at least a week after surgery. 
 These results were collected from the hospital laboratory database using an automated MS Access application as outlined in Appendix \ref{AppendixAccessDatabase}. 
 
 \subsection{Complications and severity grading}
@@ -83,6 +83,8 @@ Infective complications were also significantly associated with other complicati
 \input{Tables/crp_comp_preop_factors}
 \input{Tables/crp_comp_infect_vs_other_complications}
 
+\clearpage
+
 %CRP trends and pancreatic fistula
 \subsection{Postoperative CRP vs. POPF}
 \label{Postoperative CRP vs. POPF}
@@ -91,11 +93,21 @@ These results are presented in Table \ref{table:crp_comp_vs_POPF_ISGPS_p_values_
 Fig. \ref{fig:crp_comp_crp_popf_isgps} shows that CRP in the first postoperative week was not significantly different between postoperative pancreatic fistulae of ISGPF Grade A, B and C. 
 
 However, there is no useful clinical application for the association between CRP in the early postoperative period and  pancreatic fistula as the diagnosis of POPF is based on the amylase content in surgical drains on the third postoperative day. 
-Moreover, early postoperative CRP did not predict the severity of the pancreatic fistula either.
+Moreover, early postoperative CRP did not predict the severity of the pancreatic fistula.
 
+\subsection{Postoperative CRP vs. infective complications}
+The median CRP levels on or after postoperative day 3 were significantly higher in patients who developed clinically significant infective complications in the absence of a POPF (Fig. \ref{fig:crp_comp_infective_leak0}). 
+%Moreover, the median difference in CRP also increases from 56 mg/L on the third day to 79 mg/L on the seventh day. 
+However, there was no such association between CRP and infective complications in patients who developed a POPF (Fig. \ref{fig:crp_comp_infective_leak1}). 
+
+For instance, the median CRP on Day 4 in patients who did not develop a POPF and did not have an infective complication was 97 mg/L (IQR 71 - 174) but was 173 mg/L if they had an infective complication. (p$<$0.001). 
+However, in patients who had a POPF, the CRP on day 4 was 214 mg/L (IQR 151 - 250) in the absence of infective complications and 190 mg/L (IQR 137 - 252) in the presence of infective complications. (p = 0.559)
+
+Therefore, CRP on or after the third postoperative day appears to be useful in predicting infective complications only in patients who did not develop a POPF and these results are shown in Table \ref{table:crp_comp_vs_infections_popf_y1n0} and Fig. \ref{fig:crp_comp_infective_leak} on page \pageref{fig:crp_comp_infective_leak}. 
+
+\clearpage
 %========================CRP vs POPF============================================
 %CRP trends in a 2-panel figure and table showing p-values below it
-\clearpage
 \begin{figure}[t]
 	\caption{Serum CRP levels in the first week after pancreaticoduodenectomy in patients with postoperative pancreatic fistula (POPF).}
 	\label{fig:crp_comp_crp_popf}
@@ -104,7 +116,7 @@ Moreover, early postoperative CRP did not predict the severity of the pancreatic
 		\centering
 		\includegraphics[width=\textwidth]{Figures/crp_comp_crp_popf_yes_no}
 		\caption{POPF Absent vs. 
-Any Grade}
+			Any Grade}
 		\label{fig:crp_comp_crp_popf_yes_no}
 	\end{subfigure}
 	\hfill
@@ -114,25 +126,16 @@ Any Grade}
 		\caption{POPF ISGPF Grades}
 		\label{fig:crp_comp_crp_popf_isgps}
 	\end{subfigure}
+	
+	\caption*{Median daily CRP levels in the first postoperative week in 188 patients undergoing pancreaticoduodenectomy were compared between patients who developed a postoperative pancreatic fistula (POPF) and those who did not develop a POPF. Figure A shows a significantly raised CRP in the presence of a pancreatic fistula. However, severity of POPF did not affect CRP levels in the first postoperative week as shown in Figure B. Error bars represent 95\% confidence interval for the median.}
 \end{figure}
-\hfill
+%\hfill
 \input{Tables/crp_comp_vs_POPF_ISGPS_p_values_only}
 %==============================================================================
 \clearpage
 
-\subsection{Postoperative CRP vs. infective complications}
-The median CRP levels on or after postoperative day 3 were significantly higher in patients who developed clinically significant infective complications in the absence of a POPF (Fig. \ref{fig:crp_comp_infective_leak0}). 
-Moreover, the median difference in CRP also increases from 56 mg/L on the third day to 79 mg/L on the seventh day. 
-However, there was no such association in patients who developed a POPF (Fig. \ref{fig:crp_comp_infective_leak1}). 
-
-For instance, the median CRP on Day 4 in patients who did not develop a POPF and did not have an infective complication was 97 mg/L (IQR 71 - 174) but was 173 mg/L if they had an infective complication. (p$<$0.001). 
-However, in patients who had a POPF, the CRP on day 4 was 214 mg/L (IQR 151 - 250) in the absence of infective complications and 190 mg/L (IQR 137 - 252) in the presence of infective complications. (p = 0.559)
-
-Therefore, CRP on or after the third postoperative day appears to be useful in predicting infective complications only in patients who did not develop a POPF and these results are shown in Table \ref{table:crp_comp_vs_infections_popf_y1n0} and Fig. \ref{fig:crp_comp_infective_leak} on page \pageref{fig:crp_comp_infective_leak}. 
-
 %========================CRP vs Infections====================================
 %CRP trends vs infections in patients with or without popf in a 2-panel figure and table showing median, iqr and p-values below it
-\clearpage
 \begin{figure}[t]
 	\caption{Relationship between postoperative CRP and clinically significant infective complications in patients without (A) and with (B) POPF.}
 	\label{fig:crp_comp_infective_leak}
@@ -150,101 +153,12 @@ Therefore, CRP on or after the third postoperative day appears to be useful in p
 		\caption{Patients with POPF}
 		\label{fig:crp_comp_infective_leak1}
 	\end{subfigure}
+	\caption*{Median CRP was significantly higher in patients who developed infective complications in the absence of a pancreatic fistula (A). This difference was not seen in the presence of POPF(B). Error bars - 95\% confidence interval for the median.}
 \end{figure}
-\vfill
+
 \input{Tables/crp_comp_vs_infections_popf_y1n0}
 %==============================================================================
-\clearpage
 
-\subsection{Postoperative WCC, albumin vs. infective complications}
-
-Patients who developed infective complications in the absence of POPF had a raised total white cell count on postoperative days 5, 6 and 7 which were statistically significant.
-However, these differences were small with wide, overlapping 95\% confidence intervals (Fig. \ref{fig:crp_comp_WCC_infective_leak0}) and not clinically significant. 
-
-For instance, the median white cell count on the fifth postoperative day in patients who did not have an infective complication was 8.9 (IQR 6.6 - 11) while in patients who had an infective complication it was 9.8 (IQR 7.9 - 13). 
-While this difference was statistically significant (p = 0.028), both medians were within the normal limits for healthy adults. 
-There was no association between white cell counts and infective complications in patients who had a POPF. (Table \ref{table:crp_comp_WCC_vs_infections_popf_y1n0} and Fig. \ref{fig:crp_comp_WCC_infective_leak} on page \pageref{fig:crp_comp_WCC_infective_leak})
-
-Similar statistically significant differences were noted in the postoperative neutrophil counts on postoperative days 5, 6 and 7 in patients without a POPF while there was no difference in patients with a POPF (Table \ref{table:crp_comp_Neutrophil_vs_infections_popf_y1n0}).
-However, these differences were associated with a large overlap between the 95\% confidence intervals (error bars in Fig. \ref{fig:crp_comp_Neutrophil_infective_leak0}).
-
-Patients with infective complications in the absence of POPF had a lower median serum albumin  during the entire first postoperative week with statistically significant differences from days 3 through 7. 
-There was no association between serum albumin and infective complications in patients who had a POPF. (Table \ref{table:crp_comp_Albumin_vs_infections_popf_y1n0} and Fig. \ref{fig:crp_comp_Albumin_infective_leak} on page \pageref{fig:crp_comp_Albumin_infective_leak})
-
-%========================WCC vs Infections====================================
-%WCC trends vs infections in patients with or without popf in a 2-panel figure and table showing median, iqr and p-values below it
-\clearpage
-\begin{figure}[t]
-	\caption{Relationship between postoperative white cell count and clinically significant infective complications in patients without (A) and with (B) POPF.}
-	\label{fig:crp_comp_WCC_infective_leak}
-	\centering
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Figures/crp_comp_WCC_infective_leak0}
-		\caption{Patients with \textbf{\underline{no}} POPF}
-		\label{fig:crp_comp_WCC_infective_leak0}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Figures/crp_comp_WCC_infective_leak1}
-		\caption{Patients with POPF}
-		\label{fig:crp_comp_WCC_infective_leak1}
-	\end{subfigure}
-\end{figure}
-\vfill
-\input{Tables/crp_comp_WCC_vs_infections_popf_y1n0}
-%==============================================================================
-
-%==========Neutrophil-Neutrophil-Neutrophil-Neutrophil-Neutrophil-Neutrophil=====
-%Neutrophil trends vs infections in patients with or without popf in a 2-panel figure and table showing median, iqr and p-values below it
-\clearpage
-\begin{figure}[t]
-	\caption{Relationship between postoperative neutrophil count and clinically significant infective complications in patients without (A) and with (B) POPF.}
-	\label{fig:crp_comp_Neutrophil_infective_leak}
-	\centering
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Figures/crp_comp_Neutrophil_infective_leak0}
-		\caption{Patients with \textbf{\underline{no}} POPF}
-		\label{fig:crp_comp_Neutrophil_infective_leak0}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Figures/crp_comp_Neutrophil_infective_leak1}
-		\caption{Patients with POPF}
-		\label{fig:crp_comp_Neutrophil_infective_leak1}
-	\end{subfigure}
-\end{figure}
-\vfill
-\input{Tables/crp_comp_Neutrophil_vs_infections_popf_y1n0}
-%==============================================================================
-
-%==========Albumin-Albumin-Albumin-Albumin-Albumin-Albumin-Albumin-Albumin-=====
-%Albumin trends vs infections in patients with or without popf in a 2-panel figure and table showing median, iqr and p-values below it
-\clearpage
-\begin{figure}[t]
-	\caption{Relationship between postoperative serum albumin and clinically significant infective complications in patients without (A) and with (B) POPF.}
-	\label{fig:crp_comp_Albumin_infective_leak}
-	\centering
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Figures/crp_comp_Albumin_infective_leak0}
-		\caption{Patients with \textbf{\underline{no}} POPF}
-		\label{fig:crp_comp_Albumin_infective_leak0}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.48\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{Figures/crp_comp_Albumin_infective_leak1}
-		\caption{Patients with POPF}
-		\label{fig:crp_comp_Albumin_infective_leak1}
-	\end{subfigure}
-\end{figure}
-\vfill
-\input{Tables/crp_comp_Albumin_vs_infections_popf_y1n0}
-%=============================================================================
 \clearpage
 
 \subsection{Receiver operating characteristic (ROC) analysis}
@@ -268,7 +182,6 @@ There were no deaths in this group of patients who did not have a POPF.
 \begin{figure}[t]
 	\caption{Receiver operating characteristics analysis of C-reactive protein as a marker of postoperative infective complications.}
 	\label{fig:crp_comp_ROC_infection}
-
 	\centering
 	\begin{subfigure}{0.3\textwidth}
 		\centering
@@ -302,6 +215,7 @@ There were no deaths in this group of patients who did not have a POPF.
 		\caption{Day 7}
 		\label{fig:crp_comp_ROC_infection_D7}
 	\end{subfigure}
+	\caption*{In the 126 patients who did not develop a postoperative pancreatic fistula, C-reactive protein levels as early as the third and fourth postoperative days had a high negative predictive value of 0.79 (for Day 3  CRP $\leq$ 178 mg/l) and 0.83 (for Day 4 CRP $\leq$125 mg/l ) respectively for the prediction of infective complications.}
 \end{figure}
 \vfill
 \input{Tables/crp_comp_ROC_infections_noPOPF}
@@ -356,9 +270,8 @@ The modified Glasgow Prognostic Score, a validated measure of preoperative syste
 The lack of association between the modified Glasgow Prognostic Score and complications in the present study may have been due to the multiple factors that are responsible for preoperative systemic inflammation in these patients including obstructive jaundice, cholangitis, biliary drainage procedures and pancreatitis consequent to intervention or pancreatic duct obstruction by tumours. 
 These findings are similar to those reported by Dutta and co-workers who did not find any relationship between preoperative systemic inflammation and postoperative complications in patients undergoing oesophago-gastric surgery \parencite{dutta_persistent_2011}.
 
-The difference in white cell count and neutrophil count was not clinically significant between patients who did or did not have an infective complication. 
-This finding is similar to one of the earliest reports on the role of serial CRP measurements in predicting septic complications after surgery \parencite{mustard_c-reactive_1987} as well as in several subsequent reports \parencite{matthiessen_increase_2008, welsch_persisting_2008, dutta_persistent_2011}. 
 The temporal association between CRP and infective complications may reflect the sensitivity of CRP as a marker of systemic inflammation. 
+This finding is similar to one of the earliest reports on the role of serial CRP measurements in predicting septic complications after surgery \parencite{mustard_c-reactive_1987} as well as in several subsequent reports \parencite{matthiessen_increase_2008, welsch_persisting_2008, dutta_persistent_2011}. 
 This study was not designed to look at inflammatory markers later in the postoperative period. 
 However, Mustard and co-workers monitored CRP, white cell count and temperature for 14 days after surgery and found that CRP was the only reliable marker of septic complications \parencite{mustard_c-reactive_1987}.
 

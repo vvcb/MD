@@ -52,7 +52,7 @@ Patients scheduled to undergo pancreaticoduodenectomy for malignant or benign di
 All data were recorded in a prospectively maintained database. 
 Data was collected on demographics, preoperative clinico-pathological characteristics including blood tests, body mass index, weight, height and the underlying surgical pathology. 
 Detailed breath-by-breath data on a variety of physiological and gas-exchange parameters measured at cardiopulmonary exercise testing were also collected from a prospectively maintained database. 
-Cardiopulmonary exercise testing methodolgy is discussed in Section \ref{sec:cpx_method} (page \pageref{sec:cpx_parameters})and a description of the parameters measured at cardiopulmonary exercise testing is provided in Section \ref{sec:cpx_parameters} (page \pageref{sec:cpx_parameters}). A complete dataset for one sample patient is shown in Appendix \ref{AppendixCPETRawData} on page \pageref{AppendixCPETRawData}.
+Cardiopulmonary exercise testing methodology is discussed in Section \ref{sec:cpx_method} (page \pageref{sec:cpx_parameters})and a description of the parameters measured at cardiopulmonary exercise testing is provided in Section \ref{sec:cpx_parameters} (page \pageref{sec:cpx_parameters}). A complete dataset for one sample patient is shown in Appendix \ref{AppendixCPETRawData} on page \pageref{AppendixCPETRawData}.
 
 \subsection{Calculation of body composition}
 \label{sec:bodycomp_calculation}
@@ -99,27 +99,26 @@ Every selection was visually confirmed for anatomical accuracy by using the laye
 	\begin{subfigure}{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/bc_ct_sat}
-		\caption{Subcutaneous Adipose Tissue$^*$}
+		\caption{Subcutaneous Adipose Tissue}
 		\label{fig:bc_ct_sat}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/bc_ct_vat}
-		\caption{Visceral Adipose Tissue$^*$}
+		\caption{Visceral Adipose Tissue}
 		\label{fig:bc_ct_vat}
 	\end{subfigure}
 	\begin{subfigure}{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/bc_ct_sm}
-		\caption{Skeletal Muscle$^*$}
+		\caption{Skeletal Muscle}
 		\label{fig:bc_ct_sm}
 	\end{subfigure}
 	
-	\caption{Selection of components of body composition from CT images using GIMP.}($^*$ The selected area has been removed for representation purposes. 
-The inset confirms the area selected.)
+	\caption{Selection of components of body composition from CT images using GIMP.}
+	\caption*{The total cross-sectional area was selected by first selecting the empty space outside the image followed by inverting this selection as depicted in (A). The 'Fuzzy Select' tool was then used to select individual body composition components with visual confirmation using the 'layer selection' tool. This is shown in B, C and D. The selected area has been removed for representation purposes. The insets in each image confirm the area selected.}
 	\label{fig:bc_ct_gimp}
-	
 \end{figure}
 
 \subsection{Cardiopulmonary exercise testing}
@@ -169,25 +168,30 @@ Anaemia (haemoglobin $<$ 12 g/dl) was associated with increased adiposity in the
 	%\input{Tables/bc_sex_specific_distrib}
 	%\input{Tables/bc_clinical}
 	\input{Tables/c4_t1}
+\clearpage
 
 \subsection{Body composition vs. BMI/sex}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Figures/bc_gender_bmi_pie}
+	\caption{Differences in body composition according to sex and BMI.}
+	\caption*{Body composition differed significantly between men and women and with increasing body mass index (BMI). The proportion of skeletal muscle area decreased with increasing BMI in both sexes but there was a larger decrease in women than men. Visceral adipose tissue contributed more to weight in obese men than subcutaneous adipose tissue while the opposite was true in women.}
+	\label{fig:bc_gender_bmi}
+\end{figure}
+
 The body composition differences between male and female patients with increasing body mass index is shown in Figure \ref{fig:bc_gender_bmi} on page \pageref{fig:bc_gender_bmi}. 
 There were significant differences in the proportion of subcutaneous adipose tissue versus visceral adipose tissue between males and females. 
 Men generally had less subcutaneous fat but more visceral fat and skeletal muscle areas. 
 However, the proportion of skeletal muscle in both males and females decreased significantly with increasing body mass index.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{Figures/bc_gender_bmi_pie}
-	\caption{Differences in body composition according to sex and body mass index.}
-	\label{fig:bc_gender_bmi}
-\end{figure}
 
 The proportion of skeletal muscle area decreased from 38\% in male patients with normal BMI to 22\% in obese males. 
 There was a greater decrease in the proportion of skeletal muscle in females with increasing BMI, with skeletal muscle area decreasing from 32\% in females with normal BMI to 14\% in obese females. 
 The higher weight in the overweight/obese patients was due to a disproportionate increase in adipose tissue rather than skeletal muscle. 
 Moreover, the distribution of the adipose tissue differed between males and females.
 Visceral adipose tissue contributed more to weight in obese males (43\% VAT vs. 35\% SAT) while obese females had a greater proportion of subcutaneous adipose tissue than visceral adipose tissue (18\% VAT vs. 68\% SAT).
+
+%\clearpage
 
 \subsection{Body composition vs. pulmonary function tests}
 
@@ -201,6 +205,10 @@ This would indicate that pulmonary function was dependent on skeletal muscle are
 These results are shown in Table \ref{table:bc_cpet} on page \pageref{table:bc_cpet}.
 
 \subsection{Body composition vs. exercise load}
+
+Exercise loads achieved at anaerobic threshold and at peak exercise capacity were plotted against skeletal muscle area to create scatter-plots(Fig. \ref{fig:bc_load_vs_sm} on page \pageref{fig:bc_load_vs_sm}).  
+Exercise load correlated positively with skeletal muscle area both at anaerobic threshold ($\rho^2 = 0.284, p < 0.001$, Fig. \ref{fig:bc_at_load_vs_sm}) and at peak exercise ($\rho^2 = 0.350, p < 0.001$, Fig. \ref{fig:bc_pk_load_vs_sm}). 
+However, no correlation was identified between exercise loads achieved and adipose tissue area either at anaerobic threshold ($\rho^2 = 0.004, p = 0.587$) or peak exercise ($\rho^2 = 0.020, p = 0.206$) as shown in Table \ref{table:bc_cpet} on page \pageref{table:bc_cpet}.
 
 \begin{figure}[htb]
 	\centering
@@ -217,20 +225,15 @@ These results are shown in Table \ref{table:bc_cpet} on page \pageref{table:bc_c
 		\caption{Peak Exercise}
 		\label{fig:bc_pk_load_vs_sm}
 	\end{subfigure}
-	\caption{Correlation between exercise load and skeletal muscle area.}	
+	\caption{Correlation between exercise load and skeletal muscle area.}
+	\caption*{Scatter plots A and B show a positive correlation between exercise load achieved and skeletal muscle area both at anaerobic threshold ($p < 0.001$) and peak exercise ($p < 0.001$) respectively.}	
 	\label{fig:bc_load_vs_sm}
 	
 \end{figure}
 
-Exercise loads achieved at anaerobic threshold and at peak exercise capacity were plotted against skeletal muscle area to create scatter-plots(Fig. \ref{fig:bc_load_vs_sm} on page \pageref{fig:bc_load_vs_sm}).  
-Exercise load correlated positively with skeletal muscle area both at anaerobic threshold ($\rho^2 = 0.284, p < 0.001$, Fig. \ref{fig:bc_at_load_vs_sm}) and at peak exercise ($\rho^2 = 0.350, p < 0.001$, Fig. \ref{fig:bc_pk_load_vs_sm}). 
-However, no correlation was identified between exercise loads achieved and adipose tissue area either at anaerobic threshold ($\rho^2 = 0.004, p = 0.587$) or peak exercise ($\rho^2 = 0.020, p = 0.206$) as shown in Table \ref{table:bc_cpet} on page \pageref{table:bc_cpet}. 
-
 %This would suggest as one would expect that exercise capacity is mostly related to skeletal muscle volume rather than subcutaneous adipose tissue. - Move this to discussion 
 
 \subsection{Body composition vs. oxygen consumption}
-
-\input{Tables/bc_cpet}
 
 Partial correlations between cardiopulmonary exercise parameters at rest, anaerobic threshold and peak exercise versus body composition were adjusted for sex. 
 Our own findings (Tables \ref{table:cpet_oj_at_regression} and \ref{table:cpet_oj_peak_regression} on pages \pageref{table:cpet_oj_at_regression}, \pageref{table:cpet_oj_peak_regression}) and the findings of other authors suggest that age is not related to $\dot{V}_{O_2}$AT or $\dot{V}_{O_2}$Peak and therefore no adjustments were made for age. 
@@ -255,11 +258,12 @@ Skeletal Muscle}
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{Figures/bc_scatter_VO2_TAT}
-		\caption{$\dot{V}_{O_2}$AT vs. 
-Total Adipose Tissue}
+		\caption{$\dot{V}_{O_2}$AT vs. Total Adipose Tissue}
 		\label{fig:bc_scatter_VO2_TAT}
 	\end{subfigure}
-	\caption{Correlation between body composition and $\dot{V}_{O_2}$AT before and after correction for total body weight.}	
+	\caption{Correlation between body composition and $\dot{V}_{O_2}$AT before and after correction for total body weight.}
+	\caption*{%Scatter-plots were generated comparing absolute $\dot{V}_{O_2}$ (litres/minute, solid lines) and $\dot{V}_{O_2}$ normalised for total body weight (corrected $\dot{V}_{O_2}$, ml/kg/min, dotted lines) against skeletal muscle area (A) and total adipose tissue area (B).
+	 The solid line in A shows a positive correlation between absolute $\dot{V}_{O_2}$ and skeletal muscle area ($p<0.001$) while in B it shows no correlation with total adipose tissue as expected of exercise physiology. However, normalisation of $\dot{V}_{O_2}$ using total body weight results in a 'spurious' negative correlation with total adipose tisue area as depicted by the dotted line in B ($p<0.001$). This indicates that patients with high body mass index and excess adipose tissue will have low corrected $\dot{V}_{O_2}$, the value that is commonly used in clinical practice.}	
 	\label{fig:bc_scatter_VO2_bodycomp_reversal}
 \end{figure}
 %----------------------------------------------------------------------------------------------
@@ -277,6 +281,8 @@ There was no correlation between $O_2$Pulse and subcutaneous adipose tissue at a
 
 %$\dot{V}_{O_2}$ corrected to height seems to correlate best with BC and everything else
 
+\input{Tables/bc_cpet}
+\clearpage
 \subsection{Scaling oxygen consumption to body composition and other factors}
 Absolute $\dot{V}_{O_2}$ at the anaerobic threshold was corrected for weight, the square of height, body mass index, skeletal muscle area and estimated lean body mass. Calculation of estimated lean body mass is shown in Section \ref{sec:elbm}.
 The resulting values were compared to body composition, height, weight and body mass index using partial correlations controlling for sex (Table \ref{table:bc_at_new_indices} on page \pageref{table:bc_at_new_indices}). 
@@ -309,6 +315,7 @@ Total Adipose Tissue}
 		\label{fig:bc_scatter_VO2_TAT_elbm}
 	\end{subfigure}
 	\caption{Correlation between body composition and $\dot{V}_{O_2}$AT corrected for total body weight and estimated lean body mass.}
+	\caption*{Fig. A shows that there is little difference in the relationship between skeletal muscle area and $\dot{V}_{O_2}$ corrected using either total body weight or estimated lean body mass. However, while $\dot{V}_{O_2}$ corrected for total body weight had a 'spurious' negative correlation with total adipose tissue area (solid line in B), this 'spurious' relationship was no longer present when $\dot{V}_{O_2}$ was normalised using estimated lean body mass (dotted line in B).}
 	\label{fig:bc_scatter_VO2_bodycomp_elbm}
 \end{figure}
 %----------------------------------------------------------------------------------------------
@@ -401,9 +408,9 @@ He used the term to describe correlations that occurred as a result of using rat
 Older and co-workers in their pioneering study in 1993 reported that $\dot{V}_{O_2}$AT $<$ 11 ml/kg/min was associated with increased mortality in elderly patients undergoing major abdominal surgery \parencite{older_preoperative_1993}. 
 While they did not provide any data on other preoperative or intra-operative factors, they concluded that cardiopulmonary exercise testing was useful in predicting postoperative outcome and that a low $\dot{V}_{O_2}$AT represented cardiac failure. 
 This assertion is repeated in their later work on 548 patients which also showed a clear association between low $\dot{V}_{O_2}$AT (ml/kg/min) and mortality due to cardiovascular causes \parencite{older_cardiopulmonary_1999}. 
-The concepts of \textit{'surgical anaerobic threshold'} and \textit{'postoperative cardiac failure'} were introduced later and were described as the \textit{'inability of the heart to meet the demand of postoperative stress.'}\parencite{society_ats/accp_2003}.
+The concepts of \textit{'surgical anaerobic threshold'} and \textit{'postoperative cardiac failure'} were introduced later and were described as the \textit{'inability of the heart to meet the demand of postoperative stress.'}\parencite{_ats/accp_2003}.
 
-Swart and Carlisle als0 reported that $\dot{V}_{O_2}$AT $<$ 11 ml/kg/min in patients undergoing open colorectal surgery was associated with adverse outcomes \parencite{swart_case-controlled_2012}. 
+Swart and Carlisle also reported that $\dot{V}_{O_2}$AT $<$ 11 ml/kg/min in patients undergoing open colorectal surgery was associated with adverse outcomes \parencite{swart_case-controlled_2012}. 
 However, the proportion of females in the low $\dot{V}_{O_2}$AT group was significantly greater than that in the normal $\dot{V}_{O_2}$AT group (24\% vs 51\%). 
 The average corrected $\dot{V}_{O_2}$AT in men calculated from the data presented in their paper was 11.02 ml/kg/min while in women it was 9.81 ml/kg/min. 
 
